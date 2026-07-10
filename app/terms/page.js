@@ -75,11 +75,12 @@ export default function Terms() {
             </li>
           </ul>
 
-          <h2>4. Subscriptions, trials, and purchases</h2>
+          <h2>4. Subscriptions and purchases</h2>
           <p>
             Your first rota scan is free. Continued AI scanning is offered through
-            an auto-renewable subscription, typically after a free trial. Scan
-            credit packs may be offered as one-time (consumable) purchases.
+            a paid auto-renewable subscription (monthly or yearly) or a one-time
+            Lifetime purchase. Scan credit packs may be offered as one-time
+            (consumable) purchases.
           </p>
           <ul>
             <li>
@@ -94,13 +95,15 @@ export default function Terms() {
               24 hours before the period ends.
             </li>
             <li>
-              <strong>Free trial.</strong> If you buy a subscription during a free
-              trial, any unused portion of the trial is forfeited.
-            </li>
-            <li>
               <strong>Manage or cancel.</strong> You can manage or cancel your
               subscription any time in your Apple Account settings. Deleting the
               app does not cancel a subscription.
+            </li>
+            <li>
+              <strong>Lifetime purchase.</strong> The Lifetime option is a
+              one-time, non-consumable purchase that unlocks AI scanning without a
+              recurring charge. It can be restored on your devices via your Apple
+              Account.
             </li>
             <li>
               <strong>Consumables.</strong> Scan packs are consumable and are used

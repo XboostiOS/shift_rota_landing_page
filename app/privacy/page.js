@@ -92,7 +92,7 @@ export default function Privacy() {
           </p>
           <h3>Purchases and subscriptions</h3>
           <p>
-            When you start a trial, subscribe, or buy a scan pack, purchase status
+            When you subscribe or buy a scan pack, purchase status
             is processed through Apple and our subscription provider so we can
             unlock and restore features. Apple handles your payment; we never see
             your card details. Legal basis: performance of a contract.

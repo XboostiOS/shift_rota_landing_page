@@ -7,35 +7,17 @@ import { bp } from "../lib/base-path";
 export const APP_STORE_URL = "https://apps.apple.com/us/app/id6784589897";
 
 export function Mark({ className }) {
+  // The real app icon (rounded-square). Styling (size + corner radius) lives in
+  // .brand .mark so nav and footer stay consistent.
   return (
-    <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
-      <rect width="64" height="64" rx="15" fill="#0E0E11" />
-      <circle cx="32" cy="34" r="17" stroke="#33333A" strokeWidth="4" />
-      <path
-        d="M15 34 A17 17 0 0 1 49 34"
-        stroke="#FFC24D"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <path
-        d="M49 34 A17 17 0 0 1 15 34"
-        stroke="#5FD0BC"
-        strokeWidth="4"
-        strokeLinecap="round"
-        opacity="0.55"
-      />
-      <line
-        x1="32"
-        y1="34"
-        x2="24"
-        y2="26"
-        stroke="#E9DCC2"
-        strokeWidth="4"
-        strokeLinecap="round"
-      />
-      <circle cx="32" cy="34" r="3.4" fill="#E9DCC2" />
-      <rect x="28.5" y="9" width="7" height="6" rx="2" fill="#E9DCC2" />
-    </svg>
+    <img
+      className={className}
+      src={`${bp}/AppIcon-1024.png`}
+      alt=""
+      aria-hidden="true"
+      width="30"
+      height="30"
+    />
   );
 }
 

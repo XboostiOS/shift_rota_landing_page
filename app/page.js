@@ -327,8 +327,9 @@ export default function Home() {
               </span>
               <h2 className="head">Simple, honest pricing</h2>
               <p>
-                Your first rota scan is free. After a 14-day trial, keep scanning
-                with a subscription — and your alarms keep ringing either way.
+                Your first rota scan is free. Keep scanning with a subscription —
+                or unlock it once with Lifetime. Either way, your alarms keep
+                ringing.
               </p>
             </div>
 
@@ -347,23 +348,38 @@ export default function Home() {
               </div>
 
               <div className="price feature">
-                <span className="tag">Shiftmate subscription</span>
+                <span className="tag">Subscription</span>
                 <div className="amt">
-                  14 days <small>free trial</small>
+                  Monthly <small>or yearly</small>
                 </div>
                 <ul>
                   <li><span className="ck">✓</span> AI scanning of every new rota</li>
                   <li><span className="ck">✓</span> A monthly scan allowance</li>
-                  <li><span className="ck">✓</span> Monthly or yearly — cancel anytime</li>
-                  <li><span className="ck">✓</span> Extra scans as one-off packs if you need them</li>
+                  <li><span className="ck">✓</span> Cancel anytime, no lock-in</li>
+                  <li><span className="ck">✓</span> Top up with scan packs any time</li>
                 </ul>
-                <p className="note">
-                  Prices shown in the app in your local currency. Manual entry is
-                  always free, and alarms you’ve created keep working if your
-                  subscription ends.
-                </p>
+              </div>
+
+              <div className="price">
+                <span className="tag">Lifetime</span>
+                <div className="amt">
+                  One-time <small>pay once, yours forever</small>
+                </div>
+                <ul>
+                  <li><span className="ck">✓</span> Everything in the subscription</li>
+                  <li><span className="ck">✓</span> AI scanning that never expires</li>
+                  <li><span className="ck">✓</span> No recurring bill, ever</li>
+                  <li><span className="ck">✓</span> Future updates included</li>
+                </ul>
               </div>
             </div>
+
+            <p className="pricing-note">
+              Prices are shown in the app in your local currency. Need more than
+              your allowance? Add scan-credit packs — 1, 5, or 10 — any time.
+              Manual entry is always free, and alarms you’ve created keep ringing
+              even if a subscription ends.
+            </p>
           </div>
         </section>
 
@@ -404,9 +420,10 @@ export default function Home() {
                 there as a free, exact fallback.
               </Faq>
               <Faq q="What does it cost?">
-                Your first rota scan is free. After a 14-day trial, AI scanning
-                continues with a monthly or yearly subscription, each with a
-                monthly scan allowance. Manual entry is always free.
+                Your first rota scan is free. After that, AI scanning continues
+                with a paid subscription — monthly or yearly, each with a monthly
+                scan allowance — or a one-time Lifetime purchase. Need extra scans?
+                Add scan-credit packs any time. Manual entry is always free.
               </Faq>
             </div>
           </div>
