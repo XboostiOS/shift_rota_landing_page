@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { bp } from "../lib/base-path";
 
 export const APP_STORE_URL = "https://apps.apple.com/us/app/id6784589897";
 
@@ -78,8 +79,8 @@ export function Nav() {
           Shiftmate
         </Link>
         <div className="nav-links">
-          <a href="/#how">How it works</a>
-          <a href="/#features">Features</a>
+          <a href={`${bp}/#how`}>How it works</a>
+          <a href={`${bp}/#features`}>Features</a>
           <Link href="/privacy/">Privacy</Link>
           <Link href="/support/">Support</Link>
           <a href={APP_STORE_URL} className="btn btn-primary nav-cta">
@@ -107,10 +108,10 @@ export function Footer() {
         </div>
         <div className="col">
           <h5>Product</h5>
-          <a href="/#how">How it works</a>
-          <a href="/#features">Features</a>
-          <a href="/#pricing">Pricing</a>
-          <a href="/#faq">FAQ</a>
+          <a href={`${bp}/#how`}>How it works</a>
+          <a href={`${bp}/#features`}>Features</a>
+          <a href={`${bp}/#pricing`}>Pricing</a>
+          <a href={`${bp}/#faq`}>FAQ</a>
         </div>
         <div className="col">
           <h5>Company</h5>

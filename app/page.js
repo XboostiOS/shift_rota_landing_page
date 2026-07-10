@@ -1,4 +1,5 @@
 import { Nav, Footer, AppStoreBadge } from "./components/chrome";
+import { bp } from "./lib/base-path";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
             <div className="hero-phone">
               <div className="phone">
                 <img
-                  src="/shots/01-today-home.png"
+                  src={`${bp}/shots/01-today-home.png`}
                   alt="Shiftmate Today screen showing the next shift, readiness, and a sleep-by time"
                   width="322"
                   height="699"
@@ -139,7 +140,7 @@ export default function Home() {
                 <div className="step-visual">
                   <div className="shot-inline">
                     <img
-                      src="/shots/07-review-rota.png"
+                      src={`${bp}/shots/07-review-rota.png`}
                       alt="Review screen: eight shifts laid out on a calendar, ready to confirm"
                       width="640"
                       height="1390"
@@ -161,7 +162,7 @@ export default function Home() {
                 <div className="step-visual">
                   <div className="shot-inline">
                     <img
-                      src="/shots/08-alarms-created.png"
+                      src={`${bp}/shots/08-alarms-created.png`}
                       alt="Confirmation screen: shifts created and saved for the week"
                       width="640"
                       height="1390"
@@ -198,7 +199,7 @@ export default function Home() {
                 </div>
                 <div className="mini-phone">
                   <img
-                    src="/shots/01-today-home.png"
+                    src={`${bp}/shots/01-today-home.png`}
                     alt="Today screen with the next shift and its alarm"
                     width="240"
                     height="521"
@@ -218,7 +219,7 @@ export default function Home() {
                 </div>
                 <div className="mini-phone">
                   <img
-                    src="/shots/09-wind-down.png"
+                    src={`${bp}/shots/09-wind-down.png`}
                     alt="Wind-down screen with a sleep target and a before-sleep checklist"
                     width="240"
                     height="521"
@@ -265,7 +266,7 @@ export default function Home() {
                 </div>
                 <div className="mini-phone">
                   <img
-                    src="/shots/05-settings.png"
+                    src={`${bp}/shots/05-settings.png`}
                     alt="Settings screen with language, theme, and colour palette options"
                     width="240"
                     height="521"
@@ -291,7 +292,7 @@ export default function Home() {
                 Rotas hold names, places, and colleagues. Shiftmate treats them
                 like they’re yours — because they are.
               </p>
-              <a href="/privacy/" className="btn btn-ghost" style={{ marginTop: "26px" }}>
+              <a href={`${bp}/privacy/`} className="btn btn-ghost" style={{ marginTop: "26px" }}>
                 Read the privacy policy
               </a>
             </div>
