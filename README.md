@@ -40,7 +40,11 @@ static site and publishes `./out` to GitHub Pages.
 - **Postal address** — `[POSTAL ADDRESS]` in `app/privacy/page.js`.
 - **AI provider name** — `[FILL: AI provider name]` in `app/privacy/page.js`.
 - **Governing law** — `[JURISDICTION]` in `app/terms/page.js`.
-- Optionally add a social share image (`app/opengraph-image.png`).
+
+The social share image (1200×630) is generated at build from `app/opengraph-image.js`
+using `next/og`. Because GitHub Pages serves by file extension, `scripts/postbuild-og.mjs`
+copies the exported image to `opengraph-image.png` and rewrites the `og:image` URLs so
+scrapers get an `image/png` response.
 
 Screenshots in `public/shots/` are captured from the iOS Simulator; replace or add
 as the app evolves.

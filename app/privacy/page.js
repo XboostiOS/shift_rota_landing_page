@@ -47,10 +47,7 @@ export default function Privacy() {
             the data controller for the limited personal data described below.
           </p>
           <ul>
-            <li>Controller: Xboost</li>
-            <li>
-              Postal address: <strong>[POSTAL ADDRESS]</strong>
-            </li>
+            <li>Controller: Xboost (based in Vietnam)</li>
             <li>
               Contact:{" "}
               <a href="mailto:andrew@xboostapp.io">andrew@xboostapp.io</a>
@@ -144,7 +141,7 @@ export default function Privacy() {
           <ul>
             <li>
               A data-processing agreement is in place with the provider
-              (<strong>[FILL: AI provider name]</strong>).
+              (<strong>OpenAI</strong>).
             </li>
             <li>
               The endpoint is configured for <strong>zero retention</strong> — the
@@ -193,7 +190,7 @@ export default function Privacy() {
               feedback storage, hosted in the EU.
             </li>
             <li>
-              <strong>[FILL: AI provider name]</strong> — one-off rota parsing, as
+              <strong>OpenAI</strong> — one-off rota parsing, as
               described above.
             </li>
           </ul>

@@ -188,9 +188,10 @@ export default function Terms() {
 
           <h2>12. Governing law</h2>
           <p>
-            These Terms are governed by the laws of <strong>[JURISDICTION]</strong>,
-            without affecting mandatory consumer-protection rights you have where
-            you live.
+            These Terms, and the relationship between you and Xboost, are governed
+            by the laws applicable to your place of residence, without regard to
+            conflict-of-laws principles. Nothing here affects the mandatory
+            consumer-protection rights you have where you live.
           </p>
 
           <h2>13. Contact</h2>

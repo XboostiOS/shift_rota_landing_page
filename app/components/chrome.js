@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-// TODO: replace with the real App Store URL once the app is live.
-export const APP_STORE_URL = "#get";
+export const APP_STORE_URL = "https://apps.apple.com/us/app/id6784589897";
 
 export function Mark({ className }) {
   return (
