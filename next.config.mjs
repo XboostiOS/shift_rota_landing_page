@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
-// Served as a GitHub Pages *project* site at /shift_rota_landing_page/, so assets and
-// links need that prefix in production. Left empty in dev (next dev serves from root).
-const repo = "/shift_rota_landing_page";
-const isProd = process.env.NODE_ENV === "production";
-
+// Served at the root of the custom domain rota.xboostapp.io — so no basePath.
+// (A project-page subpath would need basePath/assetPrefix; see git history.)
 const nextConfig = {
   // Static HTML export → deployable to GitHub Pages.
   output: "export",
@@ -11,9 +8,6 @@ const nextConfig = {
   trailingSlash: true,
   // next/image optimization needs a server; disable it for the static export.
   images: { unoptimized: true },
-  // Project-page subpath prefix (only in the production build).
-  basePath: isProd ? repo : "",
-  assetPrefix: isProd ? repo : "",
 };
 
 export default nextConfig;

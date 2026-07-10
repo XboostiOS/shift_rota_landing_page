@@ -18,7 +18,7 @@ const mono = Space_Mono({
   display: "swap",
 });
 
-const SITE = "https://shift-mate.xboostapp.io";
+const SITE = "https://rota.xboostapp.io";
 
 export const metadata = {
   metadataBase: new URL(SITE),

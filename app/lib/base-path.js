@@ -1,5 +1,4 @@
-// Mirrors basePath in next.config.mjs — the GitHub Pages project-page prefix,
-// applied in production builds only. Needed for raw <img>/<a> tags: unlike
-// next/link and next/image, plain HTML tags are NOT auto-prefixed by basePath.
-export const bp =
-  process.env.NODE_ENV === "production" ? "/shift_rota_landing_page" : "";
+// The site is served at the root of the custom domain (rota.xboostapp.io), so
+// there is no path prefix. Kept as the single source of truth for raw <img>/<a>
+// paths in case a project-subpath deploy (basePath) is ever needed again.
+export const bp = "";
