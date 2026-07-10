@@ -2,7 +2,7 @@ name: Deploy landing page to GitHub Pages
 
 on:
   push:
-    branches: ["web/landing"]
+    branches: ["main"]
   workflow_dispatch:
 
 # Allow the workflow to publish to GitHub Pages.
