@@ -6,28 +6,28 @@
    ============================================================================ */
 
 :root {
-  /* ground + surfaces (from the app's neutral dark scale) */
-  --ink: #0e0e11;
-  --ink-2: #131317;
-  --surface: #17171b;
-  --card: #1d1d22;
-  --raised: #24242a;
-  --line: #2c2c33;
-  --line-strong: #3a3a42;
+  /* ground + surfaces (warm light scale) */
+  --ink: #fdfcf9; /* page ground */
+  --ink-2: #f5f3ee; /* rail / footer subtle band */
+  --surface: #faf8f3; /* cards */
+  --card: #ffffff;
+  --raised: #efece4;
+  --line: #e6e1d6;
+  --line-strong: #d3ccbc;
 
   /* text */
-  --text: #f2f2f5;
-  --muted: #a3a3ac;
-  --faint: #6c6c75;
+  --text: #191510; /* warm near-black */
+  --muted: #5c574d;
+  --faint: #8a8375;
 
-  /* brand + shift spectrum (from ShiftColor + the app CTA) */
-  --cream: #e9dcc2; /* primary CTA — the app's own button colour */
-  --cream-ink: #1a1712; /* text on cream */
-  --amber: #ffc24d; /* early shift */
-  --coral: #ff7062;
-  --teal: #5fd0bc; /* night shift */
-  --azure: #74b6f5;
-  --ready: #67c79a; /* the app's "ready" green */
+  /* brand + shift spectrum (deepened so they read on a light ground) */
+  --cream: #2b2016; /* now the warm-dark accent + primary CTA ground */
+  --cream-ink: #f3ead6; /* light text on the dark CTA */
+  --amber: #d68a0c; /* early shift */
+  --coral: #e04a3c;
+  --teal: #128a76; /* night shift */
+  --azure: #2f82d6;
+  --ready: #1c9c66; /* the app's "ready" green */
 
   --radius: 16px;
   --radius-lg: 26px;
@@ -166,7 +166,7 @@ h2.head {
   color: var(--cream-ink);
 }
 .btn-primary:hover {
-  background: #f2e9d6;
+  background: #3c2c1d;
 }
 .btn-ghost {
   background: transparent;
@@ -192,7 +192,7 @@ h2.head {
 }
 .appstore:hover {
   transform: translateY(-2px);
-  background: #f2e9d6;
+  background: #3c2c1d;
 }
 .appstore svg {
   width: 26px;
@@ -359,7 +359,7 @@ h2.head {
   border-radius: 44px;
   padding: 10px;
   background: linear-gradient(160deg, #2a2a31, #121216);
-  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.8),
+  box-shadow: 0 40px 80px -34px rgba(43, 32, 22, 0.35),
     0 0 0 1px var(--line-strong) inset;
 }
 .phone img {
@@ -381,7 +381,7 @@ h2.head {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 12px 15px;
-  box-shadow: 0 20px 40px -22px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 20px 40px -24px rgba(43, 32, 22, 0.4);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -580,13 +580,13 @@ h2.head {
   display: block;
 }
 .rota-mock i.a {
-  background: color-mix(in srgb, var(--amber) 72%, #000);
+  background: var(--amber);
 }
 .rota-mock i.c {
-  background: color-mix(in srgb, var(--coral) 66%, #000);
+  background: var(--coral);
 }
 .rota-mock i.n {
-  background: color-mix(in srgb, var(--azure) 66%, #000);
+  background: var(--azure);
 }
 .shot-inline {
   border-radius: 16px;
