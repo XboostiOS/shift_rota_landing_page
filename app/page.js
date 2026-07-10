@@ -35,9 +35,6 @@ export default function Home() {
                   <span className="dot">✓</span> First rota scan free
                 </span>
                 <span>
-                  <span className="dot">✓</span> Works offline
-                </span>
-                <span>
                   <span className="dot">✓</span> No account needed
                 </span>
               </div>
@@ -55,7 +52,7 @@ export default function Home() {
               <div className="callout">
                 <span className="bar" />
                 <div>
-                  <div className="k">Frühschicht · 06:00</div>
+                  <div className="k">Early shift · 06:00</div>
                   <div className="v">
                     Alarm <span className="arrow">→</span> 05:10
                   </div>
@@ -69,13 +66,13 @@ export default function Home() {
         <section className="rail" aria-label="A rotating shift week">
           <div className="wrap rail-inner">
             <span className="rail-label">Your week, however it rotates →</span>
-            <Chip day="Mon" cls="early" name="Früh" time="06–14" />
-            <Chip day="Tue" cls="early" name="Früh" time="06–14" />
+            <Chip day="Mon" cls="early" name="Early" time="06–14" />
+            <Chip day="Tue" cls="early" name="Early" time="06–14" />
             <Chip day="Wed" cls="off" name="Off" time="—" />
-            <Chip day="Thu" cls="late" name="Spät" time="14–22" />
-            <Chip day="Fri" cls="late" name="Spät" time="14–22" />
-            <Chip day="Sat" cls="night" name="Nacht" time="22–06" />
-            <Chip day="Sun" cls="night" name="Nacht" time="22–06" />
+            <Chip day="Thu" cls="late" name="Late" time="14–22" />
+            <Chip day="Fri" cls="late" name="Late" time="14–22" />
+            <Chip day="Sat" cls="night" name="Night" time="22–06" />
+            <Chip day="Sun" cls="night" name="Night" time="22–06" />
           </div>
         </section>
 
@@ -240,7 +237,7 @@ export default function Home() {
                 <div className="ic">{ICONS.layers}</div>
                 <h3>Your shift types</h3>
                 <p>
-                  Frühschicht, Nachtschicht, or whatever you call them — kept as
+                  Early, late, or night — or whatever you call them — kept as
                   reusable templates.
                 </p>
               </div>
