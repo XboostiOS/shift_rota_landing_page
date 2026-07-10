@@ -191,7 +191,6 @@ export default function Home() {
                     A full-screen alarm shows your shift and start time, with
                     volume that rises until you’re up. On iOS&nbsp;26 it uses
                     Apple’s AlarmKit; older iPhones fall back to notifications.
-                    Everything runs offline.
                   </p>
                 </div>
                 <div className="mini-phone">
@@ -391,11 +390,6 @@ export default function Home() {
               <h2 className="head">Questions, answered</h2>
             </div>
             <div className="faq">
-              <Faq q="Do the alarms work without internet?">
-                Yes. Your shifts and alarms are stored on your iPhone, so alarms
-                fire even in airplane mode or with no signal. An internet
-                connection is only needed to scan a new rota.
-              </Faq>
               <Faq q="Do I need to create an account?">
                 No. Shiftmate works fully anonymously — no email, password, or
                 sign-in. You can start adding shifts the moment you open it.
