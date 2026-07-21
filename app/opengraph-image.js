@@ -3,7 +3,7 @@ import { ImageResponse } from "next/og";
 // Required so the image is generated at build time for the static export.
 export const dynamic = "force-static";
 
-export const alt = "Shiftmate — Wake up for every shift, sleep enough between them";
+export const alt = "ShiftKal — Wake up for every shift, sleep enough between them";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -42,7 +42,7 @@ export default function OpengraphImage() {
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
           <img src={MARK} width={60} height={60} alt="" />
           <span style={{ fontSize: 40, fontWeight: 700, color: "#F2F2F5" }}>
-            Shiftmate
+            ShiftKal
           </span>
         </div>
 

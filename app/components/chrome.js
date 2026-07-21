@@ -34,7 +34,7 @@ export function AppStoreBadge({ soon = false }) {
     <a
       className={`appstore${soon ? " soon" : ""}`}
       href={APP_STORE_URL}
-      aria-label="Download Shiftmate on the App Store"
+      aria-label="Download ShiftKal on the App Store"
     >
       <AppleGlyph />
       <span>
@@ -58,7 +58,7 @@ export function Nav() {
       <div className="wrap nav-inner">
         <Link href="/" className="brand">
           <Mark className="mark" />
-          Shiftmate
+          ShiftKal
         </Link>
         <div className="nav-links">
           <a href={`${bp}/#how`}>How it works</a>
@@ -81,7 +81,7 @@ export function Footer() {
         <div className="brand-col">
           <Link href="/" className="brand">
             <Mark className="mark" />
-            Shiftmate
+            ShiftKal
           </Link>
           <p className="small">
             The alarm that reads your rota. Wake up for every shift, and sleep

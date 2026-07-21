@@ -4,7 +4,7 @@ import { Nav, Footer } from "../components/chrome";
 export const metadata = {
   title: "Support",
   description:
-    "Get help with Shiftmate — alarms, scanning, subscriptions, and data requests.",
+    "Get help with ShiftKal — alarms, scanning, subscriptions, and data requests.",
 };
 
 export default function Support() {
@@ -13,7 +13,7 @@ export default function Support() {
       <Nav />
       <main className="wrap legal">
         <Link href="/" className="back-link">
-          ← Back to Shiftmate
+          ← Back to ShiftKal
         </Link>
         <div className="legal-head">
           <h1>Support</h1>
@@ -32,9 +32,9 @@ export default function Support() {
 
           <h2>Alarms &amp; reliability</h2>
           <h3>My alarm didn’t go off</h3>
-          <p>Please check the following, then re-open Shiftmate so it can refresh:</p>
+          <p>Please check the following, then re-open ShiftKal so it can refresh:</p>
           <ul>
-            <li>Notifications and alarm permission are granted (iOS Settings → Shiftmate).</li>
+            <li>Notifications and alarm permission are granted (iOS Settings → ShiftKal).</li>
             <li>Your phone’s sound is on and the volume is up.</li>
             <li>A Focus or Do-Not-Disturb mode isn’t silencing alarms.</li>
             <li>The phone is charged and Low Power Mode isn’t blocking background refresh.</li>
@@ -65,12 +65,12 @@ export default function Support() {
           <p>
             Subscriptions are billed through Apple. To view, change, or cancel:
             open the iOS <strong>Settings</strong> app → tap your name →{" "}
-            <strong>Subscriptions</strong> → <strong>Shiftmate</strong>. Deleting
+            <strong>Subscriptions</strong> → <strong>ShiftKal</strong>. Deleting
             the app does not cancel a subscription.
           </p>
           <h3>Restore purchases</h3>
           <p>
-            On a new device, open Shiftmate and use “Restore purchases” so your
+            On a new device, open ShiftKal and use “Restore purchases” so your
             subscription and any scan packs are recognised.
           </p>
           <h3>Refunds</h3>
@@ -101,7 +101,7 @@ export default function Support() {
           </p>
           <h3>Turn off analytics</h3>
           <p>
-            Open Shiftmate → Settings → About, and switch off anonymous analytics.
+            Open ShiftKal → Settings → About, and switch off anonymous analytics.
           </p>
 
           <h2>Still stuck?</h2>

@@ -1,6 +1,6 @@
-# Shiftmate — landing page
+# ShiftKal — landing page
 
-Marketing site for **Shiftmate**, served at **https://shift-mate.xboostapp.io**.
+Marketing site for **ShiftKal**, served at **https://shift-mate.xboostapp.io**.
 Built with Next.js (App Router) as a **static export** and deployed to GitHub Pages.
 
 This lives on its own branch (`web/landing`) — it contains only the website, not

@@ -4,7 +4,7 @@ import { Nav, Footer } from "../components/chrome";
 export const metadata = {
   title: "Terms of Use",
   description:
-    "The terms for using Shiftmate, including subscription and billing terms and important alarm-reliability disclaimers.",
+    "The terms for using ShiftKal, including subscription and billing terms and important alarm-reliability disclaimers.",
 };
 
 export default function Terms() {
@@ -13,7 +13,7 @@ export default function Terms() {
       <Nav />
       <main className="wrap legal">
         <Link href="/" className="back-link">
-          ← Back to Shiftmate
+          ← Back to ShiftKal
         </Link>
         <div className="legal-head">
           <h1>Terms of Use</h1>
@@ -22,34 +22,34 @@ export default function Terms() {
 
         <div className="prose">
           <p>
-            These Terms of Use (“Terms”) govern your use of the Shiftmate iOS app
-            and this website (together, “Shiftmate”), provided by{" "}
+            These Terms of Use (“Terms”) govern your use of the ShiftKal iOS app
+            and this website (together, “ShiftKal”), provided by{" "}
             <strong>Xboost</strong> (“we”, “us”). By downloading or using
-            Shiftmate, you agree to these Terms. If you don’t agree, please don’t
+            ShiftKal, you agree to these Terms. If you don’t agree, please don’t
             use the app.
           </p>
 
           <div className="callout-box">
             <p>
               <strong>Important — alarms are a helper, not a guarantee.</strong>{" "}
-              Shiftmate helps you plan wake-up alarms, but it depends on your
+              ShiftKal helps you plan wake-up alarms, but it depends on your
               device, its settings, battery, volume, Focus/Do-Not-Disturb, and
-              iOS itself. <strong>Do not rely on Shiftmate alone</strong> for
+              iOS itself. <strong>Do not rely on ShiftKal alone</strong> for
               waking when missing a shift would cause you or others harm. Keep a
               backup alarm for safety-critical situations.
             </p>
           </div>
 
-          <h2>1. Who can use Shiftmate</h2>
+          <h2>1. Who can use ShiftKal</h2>
           <p>
             You must be at least 16 years old and able to form a binding contract
-            to use Shiftmate. The app is intended for personal use in managing
+            to use ShiftKal. The app is intended for personal use in managing
             your own work schedule.
           </p>
 
-          <h2>2. What Shiftmate does</h2>
+          <h2>2. What ShiftKal does</h2>
           <p>
-            Shiftmate reads a rota you provide (by photo, file, or text), lets you
+            ShiftKal reads a rota you provide (by photo, file, or text), lets you
             review and edit the resulting shifts, and schedules alarms and
             reminders on your device. AI parsing is an aid; you are responsible
             for reviewing and confirming every shift before it is scheduled.
@@ -123,7 +123,7 @@ export default function Terms() {
 
           <h2>5. Apple App Store terms (standard EULA)</h2>
           <p>
-            Shiftmate is licensed, not sold, to you for use only under Apple’s
+            ShiftKal is licensed, not sold, to you for use only under Apple’s
             standard Licensed Application End User License Agreement (EULA), except
             to the extent these Terms expand on it. You can read Apple’s standard
             EULA here:{" "}
@@ -141,7 +141,7 @@ export default function Terms() {
 
           <h2>6. Intellectual property</h2>
           <p>
-            Shiftmate, its name, design, and content are owned by Xboost and
+            ShiftKal, its name, design, and content are owned by Xboost and
             protected by law. We grant you a limited, personal, non-transferable
             licence to use the app under these Terms. Your rota content remains
             yours.
@@ -149,7 +149,7 @@ export default function Terms() {
 
           <h2>7. Third-party services</h2>
           <p>
-            Shiftmate relies on third-party services (including Apple, and the
+            ShiftKal relies on third-party services (including Apple, and the
             providers listed in our{" "}
             <Link href="/privacy/">Privacy Policy</Link>). Their terms may also
             apply to your use of those services.
@@ -157,7 +157,7 @@ export default function Terms() {
 
           <h2>8. Disclaimers</h2>
           <p>
-            Shiftmate is provided “as is” and “as available”. To the maximum
+            ShiftKal is provided “as is” and “as available”. To the maximum
             extent permitted by law, we disclaim all warranties, express or
             implied, including fitness for a particular purpose. We do not warrant
             that alarms will always fire, that AI parsing will be error-free, or
@@ -185,7 +185,7 @@ export default function Terms() {
 
           <h2>11. Termination</h2>
           <p>
-            You may stop using Shiftmate at any time by deleting the app. We may
+            You may stop using ShiftKal at any time by deleting the app. We may
             suspend or end access if you materially breach these Terms.
           </p>
 

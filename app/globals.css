@@ -1,5 +1,5 @@
 /* ============================================================================
-   Shiftmate landing — design system
+   ShiftKal landing — design system
    Palette + type mirror the app (near-black ground, cream CTA, shift spectrum
    amber→teal, DM Sans). Signature: the shift-rail + monospaced TIME as the
    structural/eyebrow device (shift work is organised by the clock, not by 01/02/03).
@@ -1037,6 +1037,43 @@ h2.head {
 }
 .prose .callout-box p:last-child {
   margin-bottom: 0;
+}
+.table-scroll {
+  overflow-x: auto;
+  margin: 20px 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 640px;
+}
+.prose thead th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--faint);
+  background: var(--surface);
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+.prose tbody td {
+  padding: 12px 14px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.55;
+}
+.prose tbody tr:last-child td {
+  border-bottom: none;
+}
+.prose tbody td strong {
+  color: var(--text);
 }
 .toc {
   font-family: var(--font-mono);

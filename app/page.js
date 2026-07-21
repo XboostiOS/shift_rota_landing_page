@@ -20,7 +20,7 @@ export default function Home() {
                 <span className="spectrum">Sleep enough</span> between them.
               </h1>
               <p className="lead">
-                Snap a photo of your rota. Shiftmate reads your shifts, sets a
+                Snap a photo of your rota. ShiftKal reads your shifts, sets a
                 reliable wake-up alarm for each one, and tells you when to go to
                 bed. No more dreading a 6&nbsp;a.m. start.
               </p>
@@ -44,7 +44,7 @@ export default function Home() {
               <div className="phone">
                 <img
                   src={`${bp}/shots/01-today-home.png`}
-                  alt="Shiftmate Today screen showing the next shift, readiness, and a sleep-by time"
+                  alt="ShiftKal Today screen showing the next shift, readiness, and a sleep-by time"
                   width="322"
                   height="699"
                 />
@@ -285,7 +285,7 @@ export default function Home() {
                 Your rota stays on your phone
               </h2>
               <p className="lead" style={{ marginTop: "18px" }}>
-                Rotas hold names, places, and colleagues. Shiftmate treats them
+                Rotas hold names, places, and colleagues. ShiftKal treats them
                 like they’re yours — because they are.
               </p>
               <a href={`${bp}/privacy/`} className="btn btn-ghost" style={{ marginTop: "26px" }}>
@@ -391,11 +391,11 @@ export default function Home() {
             </div>
             <div className="faq">
               <Faq q="Do I need to create an account?">
-                No. Shiftmate works fully anonymously — no email, password, or
+                No. ShiftKal works fully anonymously — no email, password, or
                 sign-in. You can start adding shifts the moment you open it.
               </Faq>
               <Faq q="Which iPhones does it support?">
-                Shiftmate is built for current iPhones. On iOS&nbsp;26 and later,
+                ShiftKal is built for current iPhones. On iOS&nbsp;26 and later,
                 alarms use Apple’s AlarmKit for a dedicated alarm experience; on
                 earlier versions they fall back to local notifications.
               </Faq>
@@ -425,7 +425,7 @@ export default function Home() {
           <div className="wrap">
             <h2 className="head">Stop dreading the early start</h2>
             <p className="lead">
-              Let Shiftmate carry the rota, the maths, and the wake-up — so you
+              Let ShiftKal carry the rota, the maths, and the wake-up — so you
               can just show up rested.
             </p>
             <div className="cta-row">
