@@ -1,12 +1,21 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="15" fill="#0E0E11"/>
-  <!-- Shift dial: amber day arc (top) → teal night arc (bottom), the app's shift spectrum -->
-  <circle cx="32" cy="34" r="17" stroke="#33333A" stroke-width="4"/>
-  <path d="M15 34 A17 17 0 0 1 49 34" stroke="#FFC24D" stroke-width="4" stroke-linecap="round"/>
-  <path d="M49 34 A17 17 0 0 1 15 34" stroke="#5FD0BC" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-  <!-- wake hand pointing to ~05:10 -->
-  <line x1="32" y1="34" x2="24" y2="26" stroke="#E9DCC2" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="32" cy="34" r="3.4" fill="#E9DCC2"/>
-  <!-- alarm bell top -->
-  <rect x="28.5" y="9" width="7" height="6" rx="2" fill="#E9DCC2"/>
+<svg width="64" height="64" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F8B84E"/>
+      <stop offset="1" stop-color="#E7961B"/>
+    </linearGradient>
+  </defs>
+  <!-- ShiftKal mark: orange calendar + alarm bell -->
+  <rect width="1024" height="1024" rx="224" fill="#000000"/>
+  <g fill="url(#amber)">
+    <rect x="300" y="118" width="76" height="170" rx="38"/>
+    <rect x="648" y="118" width="76" height="170" rx="38"/>
+    <rect x="150" y="212" width="724" height="172" rx="42"/>
+    <rect x="150" y="404" width="222" height="468" rx="26"/>
+    <rect x="652" y="404" width="222" height="196" rx="26"/>
+    <rect x="652" y="628" width="222" height="244" rx="26"/>
+    <circle cx="512" cy="436" r="34"/>
+    <path d="M416 700 C398 700 392 684 400 668 C430 606 430 556 430 512 C430 460 464 424 512 424 C560 424 594 460 594 512 C594 556 594 606 624 668 C632 684 626 700 608 700 Z"/>
+    <path d="M476 726 A38 34 0 0 0 548 726 Z"/>
+  </g>
 </svg>
