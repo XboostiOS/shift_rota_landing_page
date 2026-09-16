@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "BAUX4G644L.app.xboost.ShiftRota",
+        "paths": [ "/s/*" ],
+        "components": [
+          { "/": "/s/*", "comment": "Share links open ShiftKal directly (share_calendar §6.7)." }
+        ]
+      }
+    ]
+  }
+}
