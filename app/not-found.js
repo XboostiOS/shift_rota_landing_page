@@ -70,17 +70,6 @@ const STR = {
   },
 };
 
-function b64urlToUuid(s) {
-  s = s.replace(/-/g, "+").replace(/_/g, "/");
-  while (s.length % 4) s += "=";
-  let bin;
-  try { bin = atob(s); } catch (e) { return null; }
-  if (bin.length !== 16) return null;
-  let h = "";
-  for (let i = 0; i < 16; i++) h += bin.charCodeAt(i).toString(16).padStart(2, "0");
-  return `${h.slice(0, 8)}-${h.slice(8, 12)}-${h.slice(12, 16)}-${h.slice(16, 20)}-${h.slice(20)}`;
-}
-
 function Eyebrow({ children }) {
   return (
     <span className="eyebrow">
@@ -91,7 +80,7 @@ function Eyebrow({ children }) {
 }
 
 // Illustrative rota preview — the landing's signature rail, shrunk. NOT the real schedule
-// (that stays E2E-encrypted and is never decrypted in the browser).
+// (the browser only calls preview_share for the owner name + status; the schedule opens in the app).
 function ChipPreview({ t }) {
   return (
     <div className="invite-chips" aria-hidden="true">
@@ -119,15 +108,15 @@ export default function NotFound() {
 
   useEffect(() => {
     const t = STR[(navigator.language || "en").slice(0, 2)] || STR.en;
-    const m = window.location.pathname.match(/\/s\/([A-Za-z0-9_-]{22})/);
+    // Share v2: /s/<code> — a 6–8 char Crockford base32 code (server-authoritative, no key in the URL).
+    const m = window.location.pathname.match(/\/s\/([A-Za-z0-9]{4,12})/);
     if (!m) { setState({ kind: "notfound", t }); return; }
-    const id = b64urlToUuid(m[1]);
-    if (!id) { setState({ kind: "status", msg: t.revoked, eye: t.revokedEye, t }); return; }
-    const shareURL = window.location.href; // keeps #k= for the app
-    fetch(`${SUPABASE_URL}/rest/v1/rpc/share_meta`, {
+    const code = m[1].toUpperCase();
+    const shareURL = window.location.href;
+    fetch(`${SUPABASE_URL}/rest/v1/rpc/preview_share`, {
       method: "POST",
       headers: { apikey: SUPABASE_ANON, Authorization: "Bearer " + SUPABASE_ANON, "Content-Type": "application/json" },
-      body: JSON.stringify({ p_id: id }),
+      body: JSON.stringify({ p_code: code }),
     })
       .then((r) => r.json())
       .then((d) => {
