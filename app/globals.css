@@ -1102,6 +1102,95 @@ h2.head {
   color: var(--cream);
 }
 
+/* ---- share invite landing (/s/<id>, share_calendar §6.7) ----
+   The browser fallback when someone opens a share link without the app. Same
+   ground/type/CTA as the marketing pages; the shift-chip trio is the signature
+   rail, shrunk into the card (illustrative — the schedule itself is E2E and
+   never decrypted here). */
+.invite-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(40px, 9vw, 96px) var(--gutter);
+  min-height: 72dvh;
+}
+.invite-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 70px -40px color-mix(in srgb, var(--cream) 55%, transparent);
+  max-width: 460px;
+  width: 100%;
+  padding: clamp(28px, 5vw, 44px);
+  text-align: center;
+}
+.invite-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 15px;
+  margin: 0 auto 20px;
+  box-shadow: 0 10px 26px -12px rgba(25, 21, 16, 0.5);
+}
+.invite-card .eyebrow {
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.invite-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.45rem, 4.4vw, 1.95rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.invite-title .owner {
+  background: linear-gradient(90deg, var(--amber), var(--coral) 55%, var(--azure));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.invite-chips {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 22px 0 4px;
+}
+.invite-chips .chip {
+  min-width: 0;
+  flex: 1 1 0;
+  text-align: left;
+}
+.invite-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  margin: 24px 0 18px;
+}
+.invite-actions .btn {
+  width: 100%;
+}
+.invite-actions .appstore {
+  justify-content: center;
+}
+.invite-why {
+  color: var(--faint);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-top: 4px;
+}
+.invite-skeleton {
+  height: 13px;
+  border-radius: 7px;
+  background: linear-gradient(90deg, var(--raised), var(--surface), var(--raised));
+  background-size: 200% 100%;
+  animation: invite-shimmer 1.3s ease-in-out infinite;
+  margin: 12px auto;
+}
+@keyframes invite-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
 /* ---- accessibility ---- */
 :focus-visible {
   outline: 2px solid var(--cream);
