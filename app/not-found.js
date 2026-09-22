@@ -10,7 +10,7 @@
 // app directly when it's installed — this page is only for browser users without the app.
 //
 // UI mirrors the landing design system (globals.css): warm ground, Space Grotesk display,
-// the dark "cream" CTA, and the shift-chip rail as the signature motif.
+// the dark "cream" CTA, and an inviter-initials avatar header (supr.sh-style).
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -29,7 +29,6 @@ const STR = {
         <span className="owner">{n}</span> invited you to a ShiftKal calendar
       </>
     ),
-    open: "Open in ShiftKal",
     join: "Join calendar",
     why: "Install ShiftKal to see the schedule — it updates whenever they change a shift, and only invited people can view it.",
     installTitle: "ShiftKal isn't installed",
@@ -45,10 +44,6 @@ const STR = {
     notfound: "Page not found.",
     notfoundEye: "404",
     back: "Go to ShiftKal",
-    days: ["Mon", "Wed", "Sat"],
-    early: "Early",
-    late: "Late",
-    night: "Night",
   },
   de: {
     live: "Live geteilter Kalender",
@@ -57,7 +52,6 @@ const STR = {
         <span className="owner">{n}</span> hat dich zu einem ShiftKal-Kalender eingeladen
       </>
     ),
-    open: "In ShiftKal öffnen",
     join: "Kalender beitreten",
     installTitle: "ShiftKal ist nicht installiert",
     installBody: "Installiere ShiftKal und öffne diesen Link erneut, um den geteilten Kalender zu sehen.",
@@ -73,10 +67,6 @@ const STR = {
     notfound: "Seite nicht gefunden.",
     notfoundEye: "404",
     back: "Zu ShiftKal",
-    days: ["Mo", "Mi", "Sa"],
-    early: "Früh",
-    late: "Spät",
-    night: "Nacht",
   },
 };
 
@@ -98,30 +88,8 @@ function Eyebrow({ children }) {
   );
 }
 
-// Illustrative rota preview — the landing's signature rail, shrunk. NOT the real schedule
-// (the browser only calls preview_share for the owner name + status; the schedule opens in the app).
-function ChipPreview({ t }) {
-  return (
-    <div className="invite-chips" aria-hidden="true">
-      <div className="chip early">
-        <span className="day">{t.days[0]}</span>
-        <span className="name">{t.early}</span>
-        <span className="time">06–14</span>
-      </div>
-      <div className="chip late">
-        <span className="day">{t.days[1]}</span>
-        <span className="name">{t.late}</span>
-        <span className="time">14–22</span>
-      </div>
-      <div className="chip night">
-        <span className="day">{t.days[2]}</span>
-        <span className="name">{t.night}</span>
-        <span className="time">22–06</span>
-      </div>
-    </div>
-  );
-}
-
+// The browser only calls preview_share for the owner name + status; the actual schedule opens in the
+// app (never shown on the web).
 export default function NotFound() {
   const [state, setState] = useState({ kind: "loading" });
   const [showInstall, setShowInstall] = useState(false);
