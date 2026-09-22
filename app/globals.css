@@ -1240,3 +1240,20 @@ h2.head {
   cursor: pointer;
   padding: 8px;
 }
+
+/* Inviter initials avatar (share landing header). */
+.invite-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  background: var(--text);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--text) 24%, transparent);
+}

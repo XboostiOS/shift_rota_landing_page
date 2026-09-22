@@ -26,7 +26,7 @@ const STR = {
     live: "Live shared calendar",
     shared: (n) => (
       <>
-        <span className="owner">{n}</span> shared their work schedule with you.
+        <span className="owner">{n}</span> invited you to a ShiftKal calendar
       </>
     ),
     open: "Open in ShiftKal",
@@ -54,7 +54,7 @@ const STR = {
     live: "Live geteilter Kalender",
     shared: (n) => (
       <>
-        <span className="owner">{n}</span> hat den Arbeitsplan mit dir geteilt.
+        <span className="owner">{n}</span> hat dich zu einem ShiftKal-Kalender eingeladen
       </>
     ),
     open: "In ShiftKal öffnen",
@@ -79,6 +79,15 @@ const STR = {
     night: "Nacht",
   },
 };
+
+// Initials of the inviter for the header avatar (e.g. "Andrew Le" → "AL").
+function initials(name) {
+  if (!name) return "?";
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  const a = parts[0]?.[0] || "";
+  const b = parts.length > 1 ? parts[parts.length - 1][0] : "";
+  return ((a + b).toUpperCase()) || "?";
+}
 
 function Eyebrow({ children }) {
   return (
@@ -169,7 +178,12 @@ export default function NotFound() {
       <Nav />
       <main className="invite-main">
         <div className="invite-card">
-          <img className="invite-icon" src={`${bp}/AppIcon-1024.png`} alt="ShiftKal" width="62" height="62" />
+          {/* Header: an initials avatar of the person who invited you (supr.sh-style), else the app icon. */}
+          {state.kind === "invite" ? (
+            <div className="invite-avatar" aria-hidden="true">{initials(state.owner)}</div>
+          ) : (
+            <img className="invite-icon" src={`${bp}/AppIcon-1024.png`} alt="ShiftKal" width="62" height="62" />
+          )}
 
           {state.kind === "loading" && (
             <>
@@ -183,7 +197,6 @@ export default function NotFound() {
             <>
               <Eyebrow>{t.live}</Eyebrow>
               <h1 className="invite-title">{t.shared(state.owner)}</h1>
-              <ChipPreview t={t} />
               <div className="invite-actions">
                 {/* One button: it opens the app if installed; only a failed open reveals Install. */}
                 <button className="btn btn-primary" onClick={() => attemptJoin(state.shareURL)}>{t.join}</button>
