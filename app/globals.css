@@ -1206,3 +1206,37 @@ h2.head {
     scroll-behavior: auto !important;
   }
 }
+
+/* Install modal (share landing): shown only after a failed "Join" open (app not installed). */
+.modal-scrim {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in srgb, var(--text) 42%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 50;
+}
+.modal-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 20px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--text) 24%, transparent);
+}
+.modal-title { font-size: 1.25rem; font-weight: 650; color: var(--text); margin: 0 0 8px; }
+.modal-body { color: var(--muted); margin: 0 0 18px; line-height: 1.45; }
+.modal-card .invite-actions { justify-content: center; }
+.modal-close {
+  margin-top: 14px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+  padding: 8px;
+}

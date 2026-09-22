@@ -30,7 +30,12 @@ const STR = {
       </>
     ),
     open: "Open in ShiftKal",
+    join: "Join calendar",
     why: "Install ShiftKal to see the schedule — it updates whenever they change a shift, and only invited people can view it.",
+    installTitle: "ShiftKal isn't installed",
+    installBody: "Install ShiftKal, then open this link again to view the shared calendar.",
+    tryAgain: "Try opening again",
+    close: "Close",
     revoked: "This link is no longer valid.",
     revokedEye: "Link closed",
     expired: (n) => `This link has stopped accepting new people. Ask ${n || "them"} for a new one.`,
@@ -53,6 +58,11 @@ const STR = {
       </>
     ),
     open: "In ShiftKal öffnen",
+    join: "Kalender beitreten",
+    installTitle: "ShiftKal ist nicht installiert",
+    installBody: "Installiere ShiftKal und öffne diesen Link erneut, um den geteilten Kalender zu sehen.",
+    tryAgain: "Erneut öffnen",
+    close: "Schließen",
     why: "Installiere ShiftKal, um den Plan zu sehen — er aktualisiert sich bei jeder Schichtänderung, und nur eingeladene Personen sehen ihn.",
     revoked: "Dieser Link ist nicht mehr gültig.",
     revokedEye: "Link geschlossen",
@@ -105,6 +115,30 @@ function ChipPreview({ t }) {
 
 export default function NotFound() {
   const [state, setState] = useState({ kind: "loading" });
+  const [showInstall, setShowInstall] = useState(false);
+
+  // A previous "Join" tap set a flag then navigated to the universal link. If the app was installed
+  // iOS opened it (the page hid → flag cleared); if we're back here with the flag still set, the app
+  // isn't installed → surface the install modal. So install is offered ONLY after a failed open, not
+  // upfront.
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem("sk_join")) {
+        sessionStorage.removeItem("sk_join");
+        setShowInstall(true);
+      }
+    } catch {}
+  }, []);
+
+  // Try to open the app via the universal link (a user-gesture navigation, so iOS can hand off to the
+  // app when installed). Set a flag first; clear it if the page backgrounds (app opened).
+  const attemptJoin = (url) => {
+    const clear = () => { try { sessionStorage.removeItem("sk_join"); } catch {} };
+    try { sessionStorage.setItem("sk_join", "1"); } catch {}
+    document.addEventListener("visibilitychange", () => { if (document.hidden) clear(); }, { once: true });
+    window.addEventListener("pagehide", clear, { once: true });
+    window.location.href = url;
+  };
 
   useEffect(() => {
     const t = STR[(navigator.language || "en").slice(0, 2)] || STR.en;
@@ -151,8 +185,8 @@ export default function NotFound() {
               <h1 className="invite-title">{t.shared(state.owner)}</h1>
               <ChipPreview t={t} />
               <div className="invite-actions">
-                <a className="btn btn-primary" href={state.shareURL}>{t.open}</a>
-                <AppStoreBadge />
+                {/* One button: it opens the app if installed; only a failed open reveals Install. */}
+                <button className="btn btn-primary" onClick={() => attemptJoin(state.shareURL)}>{t.join}</button>
               </div>
               <p className="invite-why">{t.why}</p>
             </>
@@ -178,6 +212,24 @@ export default function NotFound() {
             </>
           )}
         </div>
+
+        {showInstall && (
+          <div className="modal-scrim" onClick={() => setShowInstall(false)}>
+            <div className="modal-card" onClick={(e) => e.stopPropagation()}>
+              <h2 className="modal-title">{t.installTitle}</h2>
+              <p className="modal-body">{t.installBody}</p>
+              <div className="invite-actions">
+                <AppStoreBadge />
+                {state.kind === "invite" && (
+                  <button className="btn btn-ghost" onClick={() => { setShowInstall(false); attemptJoin(state.shareURL); }}>
+                    {t.tryAgain}
+                  </button>
+                )}
+              </div>
+              <button className="modal-close" onClick={() => setShowInstall(false)}>{t.close}</button>
+            </div>
+          </div>
+        )}
       </main>
       <Footer />
     </>
