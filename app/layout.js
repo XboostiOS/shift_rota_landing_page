@@ -27,7 +27,7 @@ export const metadata = {
     template: "%s · ShiftKal",
   },
   description:
-    "Snap a photo of your work rota and ShiftKal reads your shifts, sets a reliable wake-up alarm for each one, and tells you when to sleep. Built for shift workers. For iPhone.",
+    "ShiftKal keeps your whole shift rotation in one place, sets a reliable wake-up alarm for every shift, and protects your sleep in between. Add shifts by tapping, or scan your rota. Built for shift workers. For iPhone.",
   applicationName: "ShiftKal",
   keywords: [
     "shift work alarm",
@@ -45,13 +45,13 @@ export const metadata = {
     siteName: "ShiftKal",
     title: "ShiftKal — Wake up for every shift",
     description:
-      "Snap your rota. ShiftKal reads your shifts, sets reliable alarms, and protects your sleep. For iPhone.",
+      "Your whole rotation in one place, a reliable alarm for every shift, and protected sleep in between. For iPhone.",
   },
   twitter: {
     card: "summary_large_image",
     title: "ShiftKal — Wake up for every shift",
     description:
-      "Snap your rota. ShiftKal reads your shifts, sets reliable alarms, and protects your sleep.",
+      "Your whole rotation in one place, a reliable alarm for every shift, and protected sleep in between.",
   },
   robots: { index: true, follow: true },
 };

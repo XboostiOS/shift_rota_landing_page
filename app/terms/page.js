@@ -77,10 +77,10 @@ export default function Terms() {
 
           <h2>4. Subscriptions and purchases</h2>
           <p>
-            Your first rota scan is free. Continued AI scanning is offered through
-            a paid auto-renewable subscription (monthly or yearly) or a one-time
-            Lifetime purchase. Scan credit packs may be offered as one-time
-            (consumable) purchases.
+            AI scanning is offered through a paid auto-renewable subscription
+            (monthly or yearly) or a one-time Lifetime purchase. Scan credit
+            packs may be offered as one-time (consumable) purchases. Manual
+            shift entry is available at no cost.
           </p>
           <ul>
             <li>

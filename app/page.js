@@ -20,9 +20,10 @@ export default function Home() {
                 <span className="spectrum">Sleep enough</span> between them.
               </h1>
               <p className="lead">
-                Snap a photo of your rota. ShiftKal reads your shifts, sets a
-                reliable wake-up alarm for each one, and tells you when to go to
-                bed. No more dreading a 6&nbsp;a.m. start.
+                See your whole rotation in one place, get a reliable wake-up
+                alarm for every shift, and know exactly when to sleep. Add
+                shifts in seconds — tap them in, or snap a photo of your rota.
+                No more dreading a 6&nbsp;a.m. start.
               </p>
               <div className="cta-row">
                 <AppStoreBadge />
@@ -32,7 +33,7 @@ export default function Home() {
               </div>
               <div className="reassure">
                 <span>
-                  <span className="dot">✓</span> First rota scan free
+                  <span className="dot">✓</span> Your whole rotation in one place
                 </span>
                 <span>
                   <span className="dot">✓</span> No account needed
@@ -82,7 +83,7 @@ export default function Home() {
             <div className="sec-head center">
               <span className="eyebrow">
                 <span className="tick" />
-                From photo to <span className="time">05:10</span> alarm
+                From your shifts to a <span className="time">05:10</span> alarm
               </span>
               <h2 className="head">Three steps, then it runs itself</h2>
               <p>
@@ -95,12 +96,13 @@ export default function Home() {
               <div className="step">
                 <div className="clock">
                   <span className="tick" style={{ background: "var(--amber)" }} />
-                  STEP 01 · Snap
+                  STEP 01 · Add
                 </div>
-                <h3>Snap or paste your rota</h3>
+                <h3>Add your shifts</h3>
                 <p>
-                  Take a photo, add a screenshot or PDF, or just describe your
-                  rotation in plain words. Whatever your workplace hands you.
+                  Tap shifts straight onto the calendar, or — if it’s a whole
+                  rota at once — snap a photo, screenshot, or PDF and let AI fill
+                  it in. Whatever your workplace hands you.
                 </p>
                 <div className="step-visual">
                   <div className="rota-mock" aria-hidden="true">
@@ -130,9 +132,9 @@ export default function Home() {
                 </div>
                 <h3>Check every shift</h3>
                 <p>
-                  The AI reads your shifts onto a calendar. You confirm or fix
-                  each one before a single alarm is set — a wrong night shift
-                  never slips through.
+                  Your shifts land on a calendar. You confirm or fix each one
+                  before a single alarm is set — a wrong night shift never slips
+                  through.
                 </p>
                 <div className="step-visual">
                   <div className="shot-inline">
@@ -177,20 +179,48 @@ export default function Home() {
             <div className="sec-head">
               <span className="eyebrow">
                 <span className="tick" style={{ background: "var(--teal)" }} />
-                Built for the night shift
+                Built around your rotation
               </span>
-              <h2 className="head">Everything a rotating week needs</h2>
+              <h2 className="head">Three things a shift worker needs</h2>
+              <p>
+                See your whole schedule, wake up for every shift, and protect
+                the sleep in between. AI scanning is there when you want it — it
+                just fills the calendar faster.
+              </p>
             </div>
 
             <div className="features">
+              <div className="feat wide azure">
+                <div>
+                  <div className="ic">{ICONS.calendar}</div>
+                  <h3>Your whole rotation, in one place</h3>
+                  <p>
+                    Every shift on a calendar and a home-screen widget,
+                    colour-coded early to night. See your work and off days weeks
+                    ahead — so you can plan appointments, trips, and time with
+                    family around them, and never double-book a day off.
+                  </p>
+                </div>
+                <div className="mini-phone">
+                  <img
+                    src={`${bp}/shots/02-calendar-month.png`}
+                    alt="Month calendar with each shift colour-coded from early to night"
+                    width="240"
+                    height="521"
+                  />
+                </div>
+              </div>
+
               <div className="feat wide">
                 <div>
                   <div className="ic">{ICONS.bell}</div>
-                  <h3>Alarms that actually wake you</h3>
+                  <h3>An alarm for every shift, set for you</h3>
                   <p>
-                    A full-screen alarm shows your shift and start time, with
-                    volume that rises until you’re up. On iOS&nbsp;26 it uses
-                    Apple’s AlarmKit; older iPhones fall back to notifications.
+                    Add a shift and its wake-up alarm is created automatically —
+                    timed to your own prep and commute. A full-screen alarm shows
+                    the shift and start time, with volume that rises until you’re
+                    up. On iOS&nbsp;26 it uses Apple’s AlarmKit; older iPhones
+                    fall back to notifications.
                   </p>
                 </div>
                 <div className="mini-phone">
@@ -223,15 +253,6 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="feat azure">
-                <div className="ic">{ICONS.calendar}</div>
-                <h3>Your whole rotation</h3>
-                <p>
-                  Every shift, colour-coded early to night, on a calendar and a
-                  home-screen widget.
-                </p>
-              </div>
-
               <div className="feat">
                 <div className="ic">{ICONS.layers}</div>
                 <h3>Your shift types</h3>
@@ -243,10 +264,11 @@ export default function Home() {
 
               <div className="feat ready">
                 <div className="ic">{ICONS.hand}</div>
-                <h3>Always a free way in</h3>
+                <h3>Scan a rota, or type it</h3>
                 <p>
-                  Prefer to type it? Manual entry is always available and never
-                  costs a scan.
+                  Snap a photo, screenshot, or PDF and AI fills your shifts in.
+                  Prefer to type? Manual entry is always free and never costs a
+                  scan.
                 </p>
               </div>
 
@@ -319,39 +341,38 @@ export default function Home() {
             <div className="sec-head center">
               <span className="eyebrow">
                 <span className="tick" />
-                Try it before you pay
+                One app, three ways to pay
               </span>
               <h2 className="head">Simple, honest pricing</h2>
               <p>
-                Your first rota scan is free. Keep scanning with a subscription —
-                or unlock it once with Lifetime. Either way, your alarms keep
-                ringing.
+                Go monthly, save with yearly, or unlock everything once with
+                Lifetime. Whichever you choose, your alarms keep ringing.
               </p>
             </div>
 
             <div className="pricing">
               <div className="price">
-                <span className="tag">Free</span>
+                <span className="tag">Monthly</span>
                 <div className="amt">
-                  €0 <small>to get started</small>
-                </div>
-                <ul>
-                  <li><span className="ck">✓</span> Your first rota scan, on us</li>
-                  <li><span className="ck">✓</span> Unlimited manual shift entry</li>
-                  <li><span className="ck">✓</span> Reliable alarms &amp; sleep-by times</li>
-                  <li><span className="ck">✓</span> Calendar &amp; home-screen widget</li>
-                </ul>
-              </div>
-
-              <div className="price feature">
-                <span className="tag">Subscription</span>
-                <div className="amt">
-                  Monthly <small>or yearly</small>
+                  Monthly <small>billed every month</small>
                 </div>
                 <ul>
                   <li><span className="ck">✓</span> AI scanning of every new rota</li>
                   <li><span className="ck">✓</span> A monthly scan allowance</li>
+                  <li><span className="ck">✓</span> Reliable alarms &amp; sleep-by times</li>
                   <li><span className="ck">✓</span> Cancel anytime, no lock-in</li>
+                </ul>
+              </div>
+
+              <div className="price feature">
+                <span className="tag">Yearly</span>
+                <div className="amt">
+                  Yearly <small>best value</small>
+                </div>
+                <ul>
+                  <li><span className="ck">✓</span> Everything in Monthly</li>
+                  <li><span className="ck">✓</span> Save vs. paying monthly</li>
+                  <li><span className="ck">✓</span> A monthly scan allowance</li>
                   <li><span className="ck">✓</span> Top up with scan packs any time</li>
                 </ul>
               </div>
@@ -411,10 +432,11 @@ export default function Home() {
                 there as a free, exact fallback.
               </Faq>
               <Faq q="What does it cost?">
-                Your first rota scan is free. After that, AI scanning continues
-                with a paid subscription — monthly or yearly, each with a monthly
-                scan allowance — or a one-time Lifetime purchase. Need extra scans?
-                Add scan-credit packs any time. Manual entry is always free.
+                AI scanning runs on a paid plan — monthly or yearly, each with a
+                monthly scan allowance — or a one-time Lifetime purchase. Need
+                extra scans? Add scan-credit packs any time. Manual entry is
+                always free, and alarms you’ve created keep ringing even if a
+                subscription ends.
               </Faq>
             </div>
           </div>

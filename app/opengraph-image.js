@@ -7,18 +7,27 @@ export const alt = "ShiftKal — Wake up for every shift, sleep enough between t
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Brand mark (the shift dial), embedded as a data-URI SVG so Satori rasterizes it.
+// Brand mark (outlined calendar + alarm bell), embedded as a data-URI SVG so Satori rasterizes it.
 const MARK =
   "data:image/svg+xml;utf8," +
   encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-      <rect width="64" height="64" rx="15" fill="#0E0E11"/>
-      <circle cx="32" cy="34" r="17" fill="none" stroke="#33333A" stroke-width="4"/>
-      <path d="M15 34 A17 17 0 0 1 49 34" fill="none" stroke="#FFC24D" stroke-width="4" stroke-linecap="round"/>
-      <path d="M49 34 A17 17 0 0 1 15 34" fill="none" stroke="#5FD0BC" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
-      <line x1="32" y1="34" x2="24" y2="26" stroke="#E9DCC2" stroke-width="4" stroke-linecap="round"/>
-      <circle cx="32" cy="34" r="3.4" fill="#E9DCC2"/>
-      <rect x="28.5" y="9" width="7" height="6" rx="2" fill="#E9DCC2"/>
+    `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 1024 1024">
+      <rect width="1024" height="1024" rx="224" fill="#000000"/>
+      <g stroke="#F5B33C" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M300 220 H700 A120 120 0 0 1 820 340 V700 A120 120 0 0 1 700 820 H300 A120 120 0 0 1 180 700 V340 A120 120 0 0 1 300 220 Z"/>
+        <line x1="330" y1="220" x2="670" y2="220"/>
+        <line x1="360" y1="150" x2="360" y2="290"/>
+        <line x1="640" y1="150" x2="640" y2="290"/>
+      </g>
+      <g fill="#F5B33C">
+        <rect x="300" y="430" width="96" height="96" rx="26"/>
+        <rect x="452" y="430" width="96" height="96" rx="26"/>
+        <rect x="604" y="430" width="96" height="96" rx="26"/>
+        <rect x="300" y="590" width="96" height="96" rx="26"/>
+        <rect x="452" y="590" width="96" height="96" rx="26"/>
+        <path d="M770 560 C688 560 640 612 640 700 C640 754 624 792 596 820 C582 834 592 858 612 858 H928 C948 858 958 834 944 820 C916 792 900 754 900 700 C900 612 852 560 770 560 Z"/>
+        <path d="M732 892 A46 40 0 0 0 808 892 Z"/>
+      </g>
     </svg>`
   );
 
@@ -56,7 +65,7 @@ export default function OpengraphImage() {
               marginBottom: 14,
             }}
           >
-            The alarm that reads your rota
+            Your shifts, your alarms, your sleep
           </div>
           <div
             style={{
@@ -87,7 +96,7 @@ export default function OpengraphImage() {
         {/* footer: caption + shift-spectrum bar */}
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ display: "flex", fontSize: 28, color: "#A3A3AC" }}>
-            Snap your rota&nbsp;&nbsp;·&nbsp;&nbsp;Reliable alarms&nbsp;&nbsp;·&nbsp;&nbsp;For iPhone
+            Your whole rota&nbsp;&nbsp;·&nbsp;&nbsp;Reliable alarms&nbsp;&nbsp;·&nbsp;&nbsp;For iPhone
           </div>
           <div style={{ display: "flex", gap: 10 }}>
             {spectrum.map((c) => (

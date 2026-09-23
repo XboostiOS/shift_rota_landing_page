@@ -84,8 +84,8 @@ export function Footer() {
             ShiftKal
           </Link>
           <p className="small">
-            The alarm that reads your rota. Wake up for every shift, and sleep
-            enough between them.
+            Your whole shift rotation in one place. Wake up for every shift, and
+            sleep enough between them.
           </p>
         </div>
         <div className="col">

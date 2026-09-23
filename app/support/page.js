@@ -55,9 +55,8 @@ export default function Support() {
           </p>
           <h3>I’ve used up my scans</h3>
           <p>
-            Your first scan is free; further AI scanning uses your subscription’s
-            monthly allowance. You can add shifts manually any time at no cost, or
-            buy an extra scan pack in the app.
+            AI scanning uses your plan’s monthly allowance. You can add shifts
+            manually any time at no cost, or buy an extra scan pack in the app.
           </p>
 
           <h2>Subscriptions &amp; billing</h2>

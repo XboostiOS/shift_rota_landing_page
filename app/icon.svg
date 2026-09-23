@@ -1,21 +1,29 @@
 <svg width="64" height="64" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="amber" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#F8B84E"/>
+      <stop offset="0" stop-color="#F5B33C"/>
       <stop offset="1" stop-color="#E7961B"/>
     </linearGradient>
   </defs>
-  <!-- ShiftKal mark: orange calendar + alarm bell -->
+  <!-- ShiftKal mark: outlined calendar + alarm bell -->
   <rect width="1024" height="1024" rx="224" fill="#000000"/>
+  <g stroke="url(#amber)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- calendar body -->
+    <path d="M300 220 H700 A120 120 0 0 1 820 340 V700 A120 120 0 0 1 700 820 H300 A120 120 0 0 1 180 700 V340 A120 120 0 0 1 300 220 Z"/>
+    <!-- top rail + hangers -->
+    <line x1="330" y1="220" x2="670" y2="220"/>
+    <line x1="360" y1="150" x2="360" y2="290"/>
+    <line x1="640" y1="150" x2="640" y2="290"/>
+  </g>
   <g fill="url(#amber)">
-    <rect x="300" y="118" width="76" height="170" rx="38"/>
-    <rect x="648" y="118" width="76" height="170" rx="38"/>
-    <rect x="150" y="212" width="724" height="172" rx="42"/>
-    <rect x="150" y="404" width="222" height="468" rx="26"/>
-    <rect x="652" y="404" width="222" height="196" rx="26"/>
-    <rect x="652" y="628" width="222" height="244" rx="26"/>
-    <circle cx="512" cy="436" r="34"/>
-    <path d="M416 700 C398 700 392 684 400 668 C430 606 430 556 430 512 C430 460 464 424 512 424 C560 424 594 460 594 512 C594 556 594 606 624 668 C632 684 626 700 608 700 Z"/>
-    <path d="M476 726 A38 34 0 0 0 548 726 Z"/>
+    <!-- day grid: 3 over 2 -->
+    <rect x="300" y="430" width="96" height="96" rx="26"/>
+    <rect x="452" y="430" width="96" height="96" rx="26"/>
+    <rect x="604" y="430" width="96" height="96" rx="26"/>
+    <rect x="300" y="590" width="96" height="96" rx="26"/>
+    <rect x="452" y="590" width="96" height="96" rx="26"/>
+    <!-- alarm bell, bottom-right -->
+    <path d="M770 560 C688 560 640 612 640 700 C640 754 624 792 596 820 C582 834 592 858 612 858 H928 C948 858 958 834 944 820 C916 792 900 754 900 700 C900 612 852 560 770 560 Z"/>
+    <path d="M732 892 A46 40 0 0 0 808 892 Z"/>
   </g>
 </svg>
