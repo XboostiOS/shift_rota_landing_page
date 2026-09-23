@@ -94,27 +94,20 @@ export default function NotFound() {
   const [state, setState] = useState({ kind: "loading" });
   const [showInstall, setShowInstall] = useState(false);
 
-  // A previous "Join" tap set a flag then navigated to the universal link. If the app was installed
-  // iOS opened it (the page hid → flag cleared); if we're back here with the flag still set, the app
-  // isn't installed → surface the install modal. So install is offered ONLY after a failed open, not
-  // upfront.
-  useEffect(() => {
-    try {
-      if (sessionStorage.getItem("sk_join")) {
-        sessionStorage.removeItem("sk_join");
-        setShowInstall(true);
-      }
-    } catch {}
-  }, []);
-
-  // Try to open the app via the universal link (a user-gesture navigation, so iOS can hand off to the
-  // app when installed). Set a flag first; clear it if the page backgrounds (app opened).
-  const attemptJoin = (url) => {
-    const clear = () => { try { sessionStorage.removeItem("sk_join"); } catch {} };
-    try { sessionStorage.setItem("sk_join", "1"); } catch {}
-    document.addEventListener("visibilitychange", () => { if (document.hidden) clear(); }, { once: true });
-    window.addEventListener("pagehide", clear, { once: true });
-    window.location.href = url;
+  // Open the app via the CUSTOM SCHEME (shiftkal://s/<code>). A universal (https) link does NOT hand
+  // off to the app when Safari is already on this same domain — tapping just reloads the page — which
+  // is exactly the "Join does nothing but reload" bug. The custom scheme launches the app when it's
+  // installed; if nothing opens within ~1.5s (not installed → the scheme fails silently), we surface
+  // the install modal. No sessionStorage/navigation round-trip: the page stays put and detects the
+  // hand-off via the tab going hidden.
+  const attemptJoin = (code) => {
+    if (!code) return;
+    let opened = false;
+    const onHide = () => { opened = true; };   // app took over → tab hidden → cancel the fallback
+    document.addEventListener("visibilitychange", () => { if (document.hidden) onHide(); }, { once: true });
+    window.addEventListener("pagehide", onHide, { once: true });
+    window.location.href = `shiftkal://s/${code}`;
+    window.setTimeout(() => { if (!opened && !document.hidden) setShowInstall(true); }, 1500);
   };
 
   useEffect(() => {
@@ -134,9 +127,9 @@ export default function NotFound() {
         if (!d || d.found === false || d.revoked) return setState({ kind: "status", msg: t.revoked, eye: t.revokedEye, t });
         if (d.full) return setState({ kind: "status", msg: t.full, eye: t.fullEye, t });
         if (d.invite_expired) return setState({ kind: "status", msg: t.expired(d.owner_display_name), eye: t.expiredEye, t });
-        setState({ kind: "invite", owner: d.owner_display_name || "Someone", shareURL, t });
+        setState({ kind: "invite", owner: d.owner_display_name || "Someone", code, shareURL, t });
       })
-      .catch(() => setState({ kind: "invite", owner: null, shareURL, t }));
+      .catch(() => setState({ kind: "invite", owner: null, code, shareURL, t }));
   }, []);
 
   const t = state.t || STR.en;
@@ -167,7 +160,7 @@ export default function NotFound() {
               <h1 className="invite-title">{t.shared(state.owner)}</h1>
               <div className="invite-actions">
                 {/* One button: it opens the app if installed; only a failed open reveals Install. */}
-                <button className="btn btn-primary" onClick={() => attemptJoin(state.shareURL)}>{t.join}</button>
+                <button className="btn btn-primary" onClick={() => attemptJoin(state.code)}>{t.join}</button>
               </div>
               <p className="invite-why">{t.why}</p>
             </>
@@ -202,7 +195,7 @@ export default function NotFound() {
               <div className="invite-actions">
                 <AppStoreBadge />
                 {state.kind === "invite" && (
-                  <button className="btn btn-ghost" onClick={() => { setShowInstall(false); attemptJoin(state.shareURL); }}>
+                  <button className="btn btn-ghost" onClick={() => { setShowInstall(false); attemptJoin(state.code); }}>
                     {t.tryAgain}
                   </button>
                 )}
