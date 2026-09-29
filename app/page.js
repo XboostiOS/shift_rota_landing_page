@@ -23,7 +23,8 @@ export default function Home() {
                 See your whole rotation in one place, get a reliable wake-up
                 alarm for every shift, and know exactly when to sleep. Add
                 shifts in seconds — tap them in, or snap a photo of your rota.
-                No more dreading a 6&nbsp;a.m. start.
+                Share it with the people who plan around you. No more dreading
+                a 6&nbsp;a.m. start.
               </p>
               <div className="cta-row">
                 <AppStoreBadge />
@@ -36,7 +37,10 @@ export default function Home() {
                   <span className="dot">✓</span> Your whole rotation in one place
                 </span>
                 <span>
-                  <span className="dot">✓</span> No account needed
+                  <span className="dot">✓</span> Share it with family, live
+                </span>
+                <span>
+                  <span className="dot">✓</span> No sign-up to start
                 </span>
               </div>
             </div>
@@ -181,11 +185,12 @@ export default function Home() {
                 <span className="tick" style={{ background: "var(--teal)" }} />
                 Built around your rotation
               </span>
-              <h2 className="head">Three things a shift worker needs</h2>
+              <h2 className="head">What a shift worker actually needs</h2>
               <p>
                 See your whole schedule, wake up for every shift, and protect
-                the sleep in between. AI scanning is there when you want it — it
-                just fills the calendar faster.
+                the sleep in between — then let the people at home see it too.
+                AI scanning is there when you want it — it just fills the
+                calendar faster.
               </p>
             </div>
 
@@ -233,6 +238,21 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="feat wide coral">
+                <div>
+                  <div className="ic">{ICONS.share}</div>
+                  <h3>Share your schedule with family</h3>
+                  <p>
+                    Send one link to a partner, parent, or friend. They see your
+                    shifts in a read-only calendar that updates whenever you
+                    change one — no more “are you working Saturday?” texts. Notes
+                    and pay are never shared, and you can hide any shift or
+                    remove anyone at any time.
+                  </p>
+                </div>
+                <ShareMock />
+              </div>
+
               <div className="feat wide teal">
                 <div>
                   <div className="ic">{ICONS.moon}</div>
@@ -253,43 +273,32 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="feat">
-                <div className="ic">{ICONS.layers}</div>
-                <h3>Your shift types</h3>
-                <p>
-                  Early, late, or night — or whatever you call them — kept as
-                  reusable templates.
-                </p>
-              </div>
-
               <div className="feat ready">
                 <div className="ic">{ICONS.hand}</div>
                 <h3>Scan a rota, or type it</h3>
                 <p>
                   Snap a photo, screenshot, or PDF and AI fills your shifts in.
-                  Prefer to type? Manual entry is always free and never costs a
-                  scan.
+                  Prefer to type? Manual entry never costs a scan.
                 </p>
               </div>
 
-              <div className="feat wide">
-                <div>
-                  <div className="ic">{ICONS.sliders}</div>
-                  <h3>Made to fit your life</h3>
-                  <p>
-                    Full German and English. 24-hour or 12-hour time to match
-                    your region, week starting Monday. Light, dark, and a set of
-                    colour palettes.
-                  </p>
-                </div>
-                <div className="mini-phone">
-                  <img
-                    src={`${bp}/shots/05-settings.png`}
-                    alt="Settings screen with language, theme, and colour palette options"
-                    width="240"
-                    height="521"
-                  />
-                </div>
+              <div className="feat azure">
+                <div className="ic">{ICONS.sync}</div>
+                <h3>On every iPhone you use</h3>
+                <p>
+                  Sign in with Apple and your schedule syncs across your iPhones
+                  and comes straight back on a new phone. Optional — skip it and
+                  everything stays on this device.
+                </p>
+              </div>
+
+              <div className="feat">
+                <div className="ic">{ICONS.sliders}</div>
+                <h3>Made to fit your life</h3>
+                <p>
+                  18 languages. 24-hour or 12-hour time to match your region.
+                  Light, dark, and a set of colour palettes.
+                </p>
               </div>
             </div>
           </div>
@@ -304,32 +313,39 @@ export default function Home() {
                 Private by design
               </span>
               <h2 className="head" style={{ marginTop: "18px" }}>
-                Your rota stays on your phone
+                Your schedule, on your terms
               </h2>
               <p className="lead" style={{ marginTop: "18px" }}>
                 Rotas hold names, places, and colleagues. ShiftKal treats them
-                like they’re yours — because they are.
+                like they’re yours — because they are. You decide where your
+                schedule lives and who gets to see it.
               </p>
               <a href={`${bp}/privacy/`} className="btn btn-ghost" style={{ marginTop: "26px" }}>
                 Read the privacy policy
               </a>
             </div>
             <div className="privacy-list">
-              <PV title="Shifts live on-device">
-                Your shifts, notes, locations, and colleague names never leave
-                your iPhone and are never sent to a server or a log.
+              <PV title="On your phone until you sign in">
+                Without an account, your shifts, notes, and locations stay on
+                your iPhone. Sign in with Apple only if you want sync and
+                sharing — we ask Apple for your name, never your email.
               </PV>
-              <PV title="Rota photos are deleted after reading">
+              <PV title="Synced in the EU, visible only to you">
+                When you sign in, your schedule is backed up on EU servers so it
+                follows you to a new phone. Only your account can read it.
+              </PV>
+              <PV title="You choose what people see">
+                People you share with get a read-only view. Notes and pay are
+                never shared, your workplace address only if you turn it on, and
+                any shift can be hidden.
+              </PV>
+              <PV title="Rota photos aren’t kept">
                 A scanned photo is used only to read your shifts, then removed —
                 the parsing service keeps nothing and never trains on it.
               </PV>
-              <PV title="No account, no tracking">
-                Use the app anonymously — no email or sign-in. No ad tracking, no
-                IDFA. Anonymous analytics can be switched off in one tap.
-              </PV>
-              <PV title="Hosted in the EU">
-                What little the app needs — your plan and settings — is kept on
-                EU infrastructure, GDPR-friendly by default.
+              <PV title="Delete everything in one tap">
+                Delete your account in Settings and your data is erased from our
+                servers and from your phone, and shared links stop working.
               </PV>
             </div>
           </div>
@@ -412,8 +428,24 @@ export default function Home() {
             </div>
             <div className="faq">
               <Faq q="Do I need to create an account?">
-                No. ShiftKal works fully anonymously — no email, password, or
-                sign-in. You can start adding shifts the moment you open it.
+                No. You can start adding shifts the moment you open ShiftKal —
+                no email or password. Signing in with Apple is optional: it syncs
+                your schedule across your iPhones, brings it back on a new phone,
+                and lets you share it.
+              </Faq>
+              <Faq q="How does sharing my schedule work?">
+                Create a link in the app and send it by Messages, email, or QR
+                code. The other person installs ShiftKal, signs in with Apple, and
+                sees your shifts read-only — updated whenever you change them.
+                You choose which jobs and dates they see, notes and pay are never
+                shared, and you can remove anyone or close the link at any time.
+                Both of you need to sign in with Apple, so you always know who has
+                access.
+              </Faq>
+              <Faq q="What happens if I get a new iPhone?">
+                If you’ve signed in with Apple, just sign in again with the same
+                Apple Account on the new phone and your shifts come straight back.
+                If you never signed in, your schedule lives only on the old phone.
               </Faq>
               <Faq q="Which iPhones does it support?">
                 ShiftKal is built for current iPhones. On iOS&nbsp;26 and later,
@@ -423,8 +455,8 @@ export default function Home() {
               <Faq q="What happens to a photo of my rota?">
                 It’s sent once to an AI service to read your shifts, then deleted
                 right away. The service is zero-retention and never trains on your
-                image, and no identifying account is attached. Your shift details
-                stay on your device.
+                image, and no identifying account is attached. We never store
+                the photo itself.
               </Faq>
               <Faq q="What if the AI reads a shift wrong?">
                 You review every shift on a confirmation screen before anything is
@@ -473,6 +505,31 @@ function Chip({ day, cls, name, time }) {
   );
 }
 
+function ShareMock() {
+  return (
+    <div className="share-mock" aria-hidden="true">
+      <div className="sm-link">
+        <span className="sm-k">Invite link</span>
+        <span className="sm-v">rota.xboostapp.io/s/K7Q2M9X</span>
+      </div>
+      <div className="sm-head">Who can see it</div>
+      <div className="sm-row">
+        <span className="sm-av">MA</span>
+        <span className="sm-name">Mum</span>
+        <span className="sm-tag">View only</span>
+      </div>
+      <div className="sm-row">
+        <span className="sm-av b">SA</span>
+        <span className="sm-name">Sam</span>
+        <span className="sm-tag">View only</span>
+      </div>
+      <div className="sm-hidden">
+        <span>Never shared</span> notes · pay
+      </div>
+    </div>
+  );
+}
+
 function PV({ title, children }) {
   return (
     <div className="pv">
@@ -503,6 +560,20 @@ function Faq({ q, children }) {
 }
 
 const ICONS = {
+  share: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="9" cy="8" r="3.5" />
+      <path d="M2.5 20a6.5 6.5 0 0 1 13 0" />
+      <path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.5A6.5 6.5 0 0 1 21.5 20" />
+    </svg>
+  ),
+  sync: (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 12a9 9 0 0 1-15.4 6.4L3 16" />
+      <path d="M3 12a9 9 0 0 1 15.4-6.4L21 8" />
+      <path d="M21 3v5h-5M3 21v-5h5" />
+    </svg>
+  ),
   bell: (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
@@ -518,12 +589,6 @@ const ICONS = {
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="4" width="18" height="18" rx="2" />
       <path d="M3 9h18M8 2v4M16 2v4" />
-    </svg>
-  ),
-  layers: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 3 2 9l10 6 10-6-10-6z" />
-      <path d="M2 15l10 6 10-6" />
     </svg>
   ),
   hand: (

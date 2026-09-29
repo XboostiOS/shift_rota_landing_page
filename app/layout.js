@@ -27,7 +27,7 @@ export const metadata = {
     template: "%s · ShiftKal",
   },
   description:
-    "ShiftKal keeps your whole shift rotation in one place, sets a reliable wake-up alarm for every shift, and protects your sleep in between. Add shifts by tapping, or scan your rota. Built for shift workers. For iPhone.",
+    "ShiftKal keeps your whole shift rotation in one place, sets a reliable wake-up alarm for every shift, and protects your sleep in between. Add shifts by tapping, or scan your rota, and share your schedule with family. Built for shift workers. For iPhone.",
   applicationName: "ShiftKal",
   keywords: [
     "shift work alarm",
@@ -37,6 +37,7 @@ export const metadata = {
     "rotating shifts",
     "wake up on time",
     "sleep for shift workers",
+    "share shift schedule",
   ],
   authors: [{ name: "Xboost" }],
   openGraph: {

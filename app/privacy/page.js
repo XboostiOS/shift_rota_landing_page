@@ -4,7 +4,7 @@ import { Nav, Footer } from "../components/chrome";
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "How ShiftKal handles your data: local-first, your rota never leaves your device to advertisers, EU-hosted analytics, and ad attribution only with your App Tracking Transparency consent.",
+    "How ShiftKal handles your data: on your device by default, optional EU cloud sync with Sign in with Apple, read-only sharing you control, EU-hosted analytics, and ad attribution only with your App Tracking Transparency consent.",
 };
 
 export default function Privacy() {
@@ -17,25 +17,29 @@ export default function Privacy() {
         </Link>
         <div className="legal-head">
           <h1>Privacy Policy</h1>
-          <div className="meta">Last updated: 21 July 2026</div>
+          <div className="meta">Last updated: 29 September 2026</div>
         </div>
 
         <div className="prose">
           <div className="callout-box">
             <p>
-              <strong>The short version.</strong> Your shifts and everything
-              personal in them stay on your iPhone. ShiftKal needs no account.
-              We do use one advertising-measurement tool to understand which ad
-              brought you here — but it only reads your device’s advertising
-              identifier <em>if you agree</em> to the Apple tracking prompt, and
-              it never receives your rota, photos, files, name, or email.
-              Everything we host ourselves is in the EU.
+              <strong>The short version.</strong> You can use ShiftKal without an
+              account, and then your shifts stay on your iPhone. If you choose
+              to <strong>sign in with Apple</strong>, your schedule is stored on
+              our EU servers so it syncs across your devices and can be shared
+              with people you invite — only you, and the people you invite, can
+              see it. We ask Apple only for your name, never your email. Our
+              advertising-measurement tool reads your advertising identifier
+              <em> only if you agree</em> to Apple’s tracking prompt, and never
+              receives your schedule, photos, files, or name.
             </p>
           </div>
 
           <div className="toc">
             <a href="#who">Who we are</a>
-            <a href="#device">On-device data</a>
+            <a href="#device">Your schedule</a>
+            <a href="#account">Sign in with Apple</a>
+            <a href="#sharing">Sharing</a>
             <a href="#collect">What we process</a>
             <a href="#attribution">Advertising &amp; ATT</a>
             <a href="#never">What we never collect</a>
@@ -64,43 +68,118 @@ export default function Privacy() {
             written for users in the EU/EEA (GDPR) and North America.
           </p>
 
-          <h2 id="device">2. Data that stays on your device</h2>
+          <h2 id="device">2. Your schedule: on your device, or synced</h2>
           <p>
-            ShiftKal is <strong>local-first</strong>. Your schedule lives on your
-            iPhone, and the following are stored only on your device — we do not
-            receive them, store them on our servers, log them, or share them with
-            our analytics or advertising-measurement providers:
+            Your schedule includes your shifts, shift templates, rotations,
+            workplaces (jobs), shift titles, notes and locations, pay settings,
+            personal events, and your app settings (such as language, theme,
+            and display name). Where it lives depends on whether you sign in:
           </p>
-          <ul>
-            <li>Your shifts, shift templates, and rotations</li>
-            <li>Shift titles, notes, and locations</li>
-            <li>Colleague or display names you enter</li>
-            <li>The rota photos you take and the CSV files you import</li>
-            <li>Your alarms, wake-up times, and sleep settings</li>
-            <li>Your prep, commute, and buffer times</li>
-          </ul>
+          <h3>If you don’t sign in</h3>
           <p>
-            Because this data never leaves your device, deleting the app removes
-            it. We recommend keeping a device backup if you want to preserve it.
-            (When you choose to scan a photo, the image alone is sent to an AI
-            service purely to read the shifts and is then deleted — see{" "}
-            <a href="#ai">section 6</a>. It is never sent to any advertising or
-            analytics provider.)
+            Your schedule is stored <strong>only on your iPhone</strong>. We do
+            not receive it, store it on our servers, or log it. Deleting the app
+            removes it, so we recommend a device backup if you want to keep it.
+          </p>
+          <h3>If you sign in with Apple</h3>
+          <p>
+            Your schedule is <strong>stored on our servers in the EU</strong>{" "}
+            (Supabase) and synced to every device where you sign in with the
+            same Apple Account, so it comes back after you reinstall the app or
+            move to a new phone. It is protected by access rules that let only
+            your account read or change it (plus the people you choose to share
+            with — see <a href="#sharing">section 4</a>), and it travels over an
+            encrypted connection. It is not end-to-end encrypted: our
+            infrastructure stores it in readable form so it can sync and apply
+            your sharing rules. We never use it for advertising and never send
+            it to our analytics or advertising-measurement providers. Legal
+            basis: performance of our agreement with you (Art.&nbsp;6(1)(b)
+            GDPR).
+          </p>
+          <p>
+            To let your other devices know something changed, the app also
+            updates a single timestamp in your private iCloud database
+            (Apple CloudKit). It contains no schedule data.
+          </p>
+          <h3>Always on your device only</h3>
+          <ul>
+            <li>Your scheduled alarms and reminder notifications</li>
+            <li>The rota photos you take and the files you import (see <a href="#ai">section 8</a>)</li>
+          </ul>
+          <h3>Your iPhone calendar</h3>
+          <p>
+            If you connect your iPhone calendar, ShiftKal can add your shifts to
+            a calendar on your device (which may sync through your own iCloud or
+            calendar account) and show events from calendars you pick. Events
+            you choose to show become part of your schedule in ShiftKal, so if
+            you are signed in they sync like the rest of your schedule. You can
+            disconnect at any time in Settings.
           </p>
 
-          <h2 id="collect">3. Data we process</h2>
+          <h2 id="account">3. Sign in with Apple</h2>
           <p>
-            To provide account-free entitlements, billing, product improvement,
-            and to measure our advertising, a small amount of data is processed
-            by us and our service providers. None of it identifies you by name or
-            email.
+            Signing in is optional and only needed for sync and sharing. When
+            you sign in, Apple shares with us a stable, app-specific user
+            identifier and — the first time only — the name you allow. We do{" "}
+            <strong>not</strong> request your email address. Your name is used as
+            your display name, shown to people you share with (or, if you join
+            someone else’s calendar, to its owner).
+          </p>
+          <p>
+            <strong>Sign out</strong> keeps your schedule on the phone and pauses
+            syncing. <strong>Delete account</strong> (Settings → Account)
+            permanently erases your account and all its data from our servers —
+            schedule, shares and viewer access, settings, feedback, and scan
+            allowance — removes your Apple sign-in from our system, and wipes
+            the data on that device. Delete account does not cancel an App Store
+            subscription; manage that in your Apple Account settings.
+          </p>
+
+          <h2 id="sharing">4. Sharing your schedule</h2>
+          <p>
+            If you are signed in, you can create a share link (a short code such
+            as <code>rota.xboostapp.io/s/K7Q2M9X</code>) and send it to people
+            you choose. To view it, they install ShiftKal and sign in with Apple,
+            so you always see who has access. What they can see is enforced on
+            our servers:
+          </p>
+          <ul>
+            <li>They get a <strong>read-only</strong> view of the jobs and date range you pick.</li>
+            <li>
+              <strong>Never shared:</strong> notes, pay and earnings data,
+              absence or sick status, and any shift you mark as hidden.
+            </li>
+            <li>Your workplace address is shared only if you turn it on; personal events only if you choose to include them.</li>
+            <li>
+              You can change these settings per person, remove anyone, or close
+              the link at any time; removed people lose access immediately.
+            </li>
+          </ul>
+          <p>
+            When you share, your display name is shown to people who open the
+            link (including on our website’s invite page), and viewers’ display
+            names are shown to you. To notify viewers of changes and owners of
+            new viewers, we store a push-notification token for each signed-in
+            device and send notifications through Apple’s push service. Legal
+            basis: performance of our agreement with you (Art.&nbsp;6(1)(b)
+            GDPR). Please share only with people you trust, and only schedule
+            information you are entitled to share.
+          </p>
+
+          <h2 id="collect">5. Data we process</h2>
+          <p>
+            Beyond your schedule (sections 2–4), a small amount of data is
+            processed by us and our service providers to provide entitlements,
+            billing, product improvement, and to measure our advertising. None of
+            it identifies you by email.
           </p>
           <h3>Anonymous app identifier</h3>
           <p>
-            To keep track of your subscription, scan allowance, and settings
-            without an account, the app uses an <strong>app-generated, anonymous
-            identifier</strong> (a random Supabase account UUID). It is not linked
-            to your name, email, or Apple ID. Legal basis: performance of our
+            To keep track of your subscription and scan allowance, the app uses
+            an <strong>app-generated identifier</strong> (a random Supabase
+            account UUID), created automatically on first launch even if you
+            never sign in. If you sign in with Apple, this same identifier
+            becomes your account. Legal basis: performance of our
             agreement with you (Art.&nbsp;6(1)(b) GDPR).
           </p>
           <h3>Purchases and subscriptions</h3>
@@ -131,7 +210,7 @@ export default function Privacy() {
             personal data in feedback.
           </p>
 
-          <h2 id="attribution">4. Advertising, attribution &amp; App Tracking Transparency</h2>
+          <h2 id="attribution">6. Advertising, attribution &amp; App Tracking Transparency</h2>
           <p>
             Like most apps, we run ads to reach new shift workers. To learn which
             campaign led you to install ShiftKal — and nothing more — we use{" "}
@@ -143,7 +222,7 @@ export default function Privacy() {
               <em> solely</em> to attribute installs to their ad source. The app
               sends <strong>no custom events, no purchase events, and no
               in-app behaviour</strong> to AppsFlyer. How you use the app is
-              measured only by PostHog (see <a href="#collect">section 3</a>), not
+              measured only by PostHog (see <a href="#collect">section 5</a>), not
               by AppsFlyer.
             </p>
           </div>
@@ -209,16 +288,17 @@ export default function Privacy() {
             <strong>legitimate interest</strong> in understanding and improving
             the effectiveness of our advertising (Art.&nbsp;6(1)(f) GDPR). You can
             object to processing based on legitimate interest at any time (see{" "}
-            <a href="#rights">section 9</a>).
+            <a href="#rights">section 12</a>).
           </p>
 
-          <h2 id="never">5. What we never collect</h2>
+          <h2 id="never">7. What we never collect</h2>
           <ul>
-            <li>Your name, email address, phone number, or postal address</li>
+            <li>Your email address, phone number, or postal address</li>
+            <li>Your name — unless you sign in with Apple and allow it, as your display name</li>
             <li>Your precise or approximate location</li>
             <li>Health or fitness data (sleep suggestions are calculated on your device)</li>
             <li>Your contacts</li>
-            <li>The content of your rota, photos, or imported files — for advertising or analytics</li>
+            <li>The content of your schedule, photos, or imported files — for advertising or analytics</li>
           </ul>
           <div className="callout-box">
             <p>
@@ -231,7 +311,7 @@ export default function Privacy() {
             </p>
           </div>
 
-          <h2 id="ai">6. Rota scanning and AI</h2>
+          <h2 id="ai">8. Rota scanning and AI</h2>
           <p>
             When you scan a rota, the image or the text you provide is sent to a
             third-party AI provider <strong>solely to read your shifts</strong>.
@@ -264,7 +344,7 @@ export default function Privacy() {
             case.
           </p>
 
-          <h2 id="processors">7. Third-party services</h2>
+          <h2 id="processors">9. Third-party services</h2>
           <p>
             We use a small number of trusted providers to run the app. Each has a
             distinct role and processes data only on our instructions (or, where
@@ -353,9 +433,13 @@ export default function Privacy() {
                       Privacy policy
                     </a>
                   </td>
-                  <td>Anonymous account + quota</td>
-                  <td>Anonymous account UUID, entitlement/scan quota, feedback</td>
-                  <td>Account-free entitlements and scan allowance</td>
+                  <td>Backend: accounts, sync, sharing</td>
+                  <td>
+                    Account UUID, Apple sign-in identifier, display name, synced
+                    schedule (if signed in), share settings and viewers, push
+                    tokens, entitlement/scan quota, feedback
+                  </td>
+                  <td>Accounts, cross-device sync, sharing, scan allowance</td>
                   <td>EU</td>
                 </tr>
                 <tr>
@@ -370,9 +454,12 @@ export default function Privacy() {
                       Privacy policy
                     </a>
                   </td>
-                  <td>App distribution &amp; payments</td>
-                  <td>Payment processing, SKAdNetwork, ATT framework</td>
-                  <td>Distribute the app and process purchases</td>
+                  <td>App distribution, payments, sign-in, push</td>
+                  <td>
+                    Payment processing, Sign in with Apple, push notifications,
+                    CloudKit sync signal (no schedule data), SKAdNetwork, ATT
+                  </td>
+                  <td>Distribute the app, sign you in, deliver notifications</td>
                   <td>Global</td>
                 </tr>
                 <tr>
@@ -396,7 +483,7 @@ export default function Privacy() {
             </table>
           </div>
 
-          <h2 id="location">8. Where your data is processed</h2>
+          <h2 id="location">10. Where your data is processed</h2>
           <p>
             Our analytics and backend (PostHog and Supabase) are hosted in the{" "}
             <strong>European Union</strong>. Some providers — including AppsFlyer,
@@ -405,26 +492,30 @@ export default function Privacy() {
             safeguards such as the EU Standard Contractual Clauses.
           </p>
 
-          <h2 id="retention">9. How long we keep data</h2>
+          <h2 id="retention">11. How long we keep data</h2>
           <p>
             On-device data remains until you delete it or remove the app.
-            Anonymous account and entitlement records are kept while your
-            installation is active and for as long as needed to honour purchases.
+            Removing the app does <strong>not</strong> delete data synced to your
+            account — use Delete account in Settings for that. Synced schedule
+            and account records are kept while your account exists and are
+            erased when you delete it. Records tied to an installation that never
+            signed in are kept as long as needed to honour purchases.
             Attribution data held by AppsFlyer is retained for the limited period
             needed to measure and validate a campaign, in line with AppsFlyer’s
             own retention practices. Rota images sent for scanning are not
             retained after parsing.
           </p>
 
-          <h2 id="rights">10. Your rights</h2>
+          <h2 id="rights">12. Your rights</h2>
           <p>
             Under the GDPR and similar North American laws you may have the right
             to access, correct, delete, or restrict processing of your personal
             data, to object to processing based on legitimate interest (including
             advertising attribution), to data portability, and to withdraw
-            consent at any time. Because we hold only anonymous data tied to your
-            installation, we may ask for the app’s identifier (shown in Settings)
-            to locate your records.
+            consent at any time. If you are signed in, you can delete your
+            account and all its data yourself in Settings → Account. For other
+            requests we may ask for the app’s identifier (shown in Settings) to
+            locate your records.
           </p>
           <p>
             <strong>Withdrawing tracking consent:</strong> you can turn off ad
@@ -434,35 +525,36 @@ export default function Privacy() {
             Settings.
           </p>
           <p>
-            To make a request — including deleting the data associated with your
-            installation — email{" "}
+            To make any other request — including deleting data for an
+            installation that never signed in — email{" "}
             <a href="mailto:andrew@xboostapp.io">andrew@xboostapp.io</a> or see the{" "}
             <Link href="/support/">Support page</Link>. You also have the right to
             complain to your local data protection authority.
           </p>
 
-          <h2 id="children">11. Children</h2>
+          <h2 id="children">13. Children</h2>
           <p>
             ShiftKal is intended for adults in the workforce and is not directed
             at children. We do not knowingly collect data from children under 16.
           </p>
 
-          <h2 id="permissions">12. Permissions</h2>
+          <h2 id="permissions">14. Permissions</h2>
           <p>
             The app asks for Camera and Photo Library access only to read a rota
-            you choose to scan, for Notification/alarm permission so alarms can
-            fire, and — through Apple’s ATT prompt — for optional permission to
+            you choose to scan, for Notification/alarm permission so alarms and
+            sharing updates can reach you, for Calendar access only if you
+            connect your iPhone calendar, and — through Apple’s ATT prompt — for optional permission to
             use your advertising identifier for attribution. You can change all of
             these any time in the iOS Settings app.
           </p>
 
-          <h2 id="changes">13. Changes to this policy</h2>
+          <h2 id="changes">15. Changes to this policy</h2>
           <p>
             We may update this policy as the app evolves. Material changes will be
             reflected here with a new “last updated” date.
           </p>
 
-          <h2 id="contact">14. Contact</h2>
+          <h2 id="contact">16. Contact</h2>
           <p>
             Questions about privacy? Email{" "}
             <a href="mailto:andrew@xboostapp.io">andrew@xboostapp.io</a>.

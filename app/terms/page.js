@@ -17,7 +17,7 @@ export default function Terms() {
         </Link>
         <div className="legal-head">
           <h1>Terms of Use</h1>
-          <div className="meta">Last updated: 10 July 2026</div>
+          <div className="meta">Last updated: 29 September 2026</div>
         </div>
 
         <div className="prose">
@@ -54,6 +54,12 @@ export default function Terms() {
             reminders on your device. AI parsing is an aid; you are responsible
             for reviewing and confirming every shift before it is scheduled.
           </p>
+          <p>
+            If you sign in with Apple, ShiftKal also syncs your schedule across
+            your devices and lets you share a read-only view of it with people
+            you invite. Signing in is optional; you can delete your account at
+            any time in Settings.
+          </p>
 
           <h2>3. Your responsibilities</h2>
           <ul>
@@ -68,6 +74,18 @@ export default function Terms() {
             <li>
               Only scan rotas you are entitled to use. Don’t upload content that
               infringes others’ rights or that you’re not permitted to share.
+            </li>
+            <li>
+              Share your schedule only with people you choose, and only
+              information you are allowed to share (for example, don’t share
+              colleagues’ details or rotas your employer asks you to keep
+              private). You are responsible for who you invite; you can remove
+              anyone or close a link at any time.
+            </li>
+            <li>
+              A shared schedule is read-only and may not reflect last-minute
+              changes if a device is offline — don’t rely on it as the only
+              source of truth for someone else’s whereabouts.
             </li>
             <li>
               Don’t misuse the app: no reverse engineering except as permitted by
