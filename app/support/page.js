@@ -50,13 +50,14 @@ export default function Support() {
           <p>
             You can edit any shift on the review screen before creating alarms, and
             tap a day to fix just that shift. If a rota is hard to read, a clear,
-            well-lit photo with your row or name visible helps a lot. Manual entry
-            is always available and free.
+            well-lit photo with your row or name visible helps a lot. You can
+            always add shifts by hand instead — that never uses a scan.
           </p>
           <h3>I’ve used up my scans</h3>
           <p>
             AI scanning uses your plan’s monthly allowance. You can add shifts
-            manually any time at no cost, or buy an extra scan pack in the app.
+            manually any time without using a scan, or buy an extra scan pack in
+            the app.
           </p>
 
           <h2>Sync &amp; new phones</h2>
@@ -137,13 +138,20 @@ export default function Support() {
             <a href="mailto:andrew@xboostapp.io?subject=Data%20deletion%20request">
               andrew@xboostapp.io
             </a>{" "}
-            with the subject “Data deletion request”. Include the app identifier
-            from Settings so we can find your records. See the full{" "}
+            with the subject “Data deletion request”, or send the request from
+            the app (Settings → Feedback) so we can match it to your records.
+            See the full{" "}
             <Link href="/privacy/">Privacy Policy</Link>.
           </p>
-          <h3>Turn off analytics</h3>
+          <h3>Opt out of analytics</h3>
           <p>
-            Open ShiftKal → Settings → About, and switch off anonymous analytics.
+            Email{" "}
+            <a href="mailto:andrew@xboostapp.io?subject=Analytics%20opt-out">
+              andrew@xboostapp.io
+            </a>{" "}
+            with the subject “Analytics opt-out” — or send it from the app
+            (Settings → Feedback) so we can match it to your installation — and
+            we’ll stop anonymous analytics for it.
           </p>
 
           <h2>Still stuck?</h2>

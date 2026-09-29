@@ -224,8 +224,8 @@ export default function Home() {
                     Add a shift and its wake-up alarm is created automatically —
                     timed to your own prep and commute. A full-screen alarm shows
                     the shift and start time, with volume that rises until you’re
-                    up. On iOS&nbsp;26 it uses Apple’s AlarmKit; older iPhones
-                    fall back to notifications.
+                    up. Alarms use Apple’s AlarmKit on iOS&nbsp;26 and later;
+                    on earlier versions you get shift reminders instead.
                   </p>
                 </div>
                 <div className="mini-phone">
@@ -362,7 +362,8 @@ export default function Home() {
               <h2 className="head">Simple, honest pricing</h2>
               <p>
                 Go monthly, save with yearly, or unlock everything once with
-                Lifetime. Whichever you choose, your alarms keep ringing.
+                Lifetime. Every plan includes the full app — calendar, alarms,
+                sleep planning, and sharing.
               </p>
             </div>
 
@@ -410,8 +411,9 @@ export default function Home() {
             <p className="pricing-note">
               Prices are shown in the app in your local currency. Need more than
               your allowance? Add scan-credit packs — 1, 5, or 10 — any time.
-              Manual entry is always free, and alarms you’ve created keep ringing
-              even if a subscription ends.
+              Adding shifts by hand never uses a scan. If a subscription ends,
+              the app pauses and alarms stop until you resubscribe — then
+              everything is set up again automatically.
             </p>
           </div>
         </section>
@@ -448,9 +450,10 @@ export default function Home() {
                 If you never signed in, your schedule lives only on the old phone.
               </Faq>
               <Faq q="Which iPhones does it support?">
-                ShiftKal is built for current iPhones. On iOS&nbsp;26 and later,
-                alarms use Apple’s AlarmKit for a dedicated alarm experience; on
-                earlier versions they fall back to local notifications.
+                ShiftKal runs on iOS&nbsp;18.6 and later. Wake-up alarms use
+                Apple’s AlarmKit, which needs iOS&nbsp;26 or later; on earlier
+                versions ShiftKal sends shift reminder notifications instead of
+                alarms.
               </Faq>
               <Faq q="What happens to a photo of my rota?">
                 It’s sent once to an AI service to read your shifts, then deleted
@@ -460,15 +463,15 @@ export default function Home() {
               </Faq>
               <Faq q="What if the AI reads a shift wrong?">
                 You review every shift on a confirmation screen before anything is
-                scheduled, and you can fix any of them. And manual entry is always
-                there as a free, exact fallback.
+                scheduled, and you can fix any of them. And you can always add or
+                edit shifts by hand — that never uses a scan.
               </Faq>
               <Faq q="What does it cost?">
                 AI scanning runs on a paid plan — monthly or yearly, each with a
                 monthly scan allowance — or a one-time Lifetime purchase. Need
-                extra scans? Add scan-credit packs any time. Manual entry is
-                always free, and alarms you’ve created keep ringing even if a
-                subscription ends.
+                extra scans? Add scan-credit packs any time. Adding shifts by hand
+                never uses a scan. If a subscription ends, the app pauses and its
+                alarms stop until you resubscribe.
               </Faq>
             </div>
           </div>

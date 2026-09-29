@@ -198,10 +198,11 @@ export default function Privacy() {
             an EU-hosted analytics provider. This in-app analytics is separate
             from our advertising measurement — the events are <em>not</em> sent to
             our attribution provider. We never log the content of your rota,
-            images, files, or personal shift details. Analytics are on by default
-            and you can <strong>switch them off any time</strong> in Settings.
-            Legal basis: your consent / our legitimate interest in improving the
-            app (Art.&nbsp;6(1)(a)/(f) GDPR).
+            images, files, or personal shift details. Legal basis: our
+            legitimate interest in understanding and improving the app
+            (Art.&nbsp;6(1)(f) GDPR). You can object at any time by emailing us
+            (see <a href="#rights">section 12</a>) and we will stop analytics for
+            your installation.
           </p>
           <h3>Feedback you send us</h3>
           <p>
@@ -514,15 +515,15 @@ export default function Privacy() {
             advertising attribution), to data portability, and to withdraw
             consent at any time. If you are signed in, you can delete your
             account and all its data yourself in Settings → Account. For other
-            requests we may ask for the app’s identifier (shown in Settings) to
-            locate your records.
+            requests, sending them from the app (Settings → Feedback) lets us
+            match them to your records.
           </p>
           <p>
             <strong>Withdrawing tracking consent:</strong> you can turn off ad
             tracking at any time in <strong>iOS Settings → Privacy &amp; Security
             → Tracking</strong> (or Settings → ShiftKal). This stops any further
-            use of your IDFA. You can turn off in-app analytics in the app’s own
-            Settings.
+            use of your IDFA. To object to in-app analytics, tell us from the
+            app (Settings → Feedback) or by email.
           </p>
           <p>
             To make any other request — including deleting data for an

@@ -95,10 +95,11 @@ export default function Terms() {
 
           <h2>4. Subscriptions and purchases</h2>
           <p>
-            AI scanning is offered through a paid auto-renewable subscription
-            (monthly or yearly) or a one-time Lifetime purchase. Scan credit
-            packs may be offered as one-time (consumable) purchases. Manual
-            shift entry is available at no cost.
+            ShiftKal is offered through a paid auto-renewable subscription
+            (monthly or yearly) or a one-time Lifetime purchase, each including
+            a monthly AI scan allowance. Scan credit packs may be offered as
+            one-time (consumable) purchases. Adding shifts manually does not use
+            scans.
           </p>
           <ul>
             <li>
@@ -129,9 +130,10 @@ export default function Terms() {
               by law or Apple’s policies.
             </li>
             <li>
-              <strong>After a subscription ends.</strong> Alarms you already
-              created keep working; you may lose the ability to scan new rotas
-              with AI until you resubscribe. Manual entry remains free.
+              <strong>After a subscription ends.</strong> The app pauses until
+              you resubscribe, and the alarms it scheduled are removed from your
+              device. Your schedule is kept; when you resubscribe, your alarms
+              are set up again automatically.
             </li>
           </ul>
           <p>
