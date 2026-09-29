@@ -17,9 +17,9 @@ import Link from "next/link";
 import { Nav, Footer, AppStoreBadge, APP_STORE_URL } from "./components/chrome";
 import { bp } from "./lib/base-path";
 
-// DEV project (publishable key is public by design). SWAP for PROD Supabase.
-const SUPABASE_URL = "https://dtpzzcwtjalxpzwaxzrm.supabase.co";
-const SUPABASE_ANON = "sb_publishable_YZJjetTxkyapqPETx6Xkbg_LSbi9dVT";
+// PROD Supabase project (publishable key is public by design).
+const SUPABASE_URL = "https://gpytraxkpumltnkieqsm.supabase.co";
+const SUPABASE_ANON = "sb_publishable_Wvj_vXTlDN7eIiZvdRUqlw_LJV5RZXh";
 
 const STR = {
   en: {
