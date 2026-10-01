@@ -17,7 +17,7 @@ export default function Privacy() {
         </Link>
         <div className="legal-head">
           <h1>Privacy Policy</h1>
-          <div className="meta">Last updated: 29 September 2026</div>
+          <div className="meta">Last updated: 1 October 2026</div>
         </div>
 
         <div className="prose">
@@ -71,7 +71,8 @@ export default function Privacy() {
           <h2 id="device">2. Your schedule: on your device, or synced</h2>
           <p>
             Your schedule includes your shifts, shift templates, rotations,
-            workplaces (jobs), shift titles, notes and locations, pay settings,
+            workplaces (jobs), shift titles, notes and locations, pay settings
+            (pay rates, premiums and overtime rules — financial information),
             personal events, and your app settings (such as language, theme,
             and display name). Where it lives depends on whether you sign in:
           </p>
@@ -127,7 +128,7 @@ export default function Privacy() {
           </p>
           <p>
             <strong>Sign out</strong> keeps your schedule on the phone and pauses
-            syncing. <strong>Delete account</strong> (Settings → Account)
+            syncing. <strong>Delete account</strong> (Settings → Apple Account)
             permanently erases your account and all its data from our servers —
             schedule, shares and viewer access, settings, feedback, and scan
             allowance — removes your Apple sign-in from our system, and wipes
@@ -149,7 +150,7 @@ export default function Privacy() {
               <strong>Never shared:</strong> notes, pay and earnings data,
               absence or sick status, and any shift you mark as hidden.
             </li>
-            <li>Your workplace address is shared only if you turn it on; personal events only if you choose to include them.</li>
+            <li>Your workplace (its name and address) is shared only if you turn it on; personal events only if you choose to include them.</li>
             <li>
               You can change these settings per person, remove anyone, or close
               the link at any time; removed people lose access immediately.
@@ -190,12 +191,14 @@ export default function Privacy() {
             never see your card details. Legal basis: performance of a contract
             (Art.&nbsp;6(1)(b) GDPR).
           </p>
-          <h3>Anonymous product analytics</h3>
+          <h3>Product analytics</h3>
           <p>
             To understand how the app is used and fix problems, we collect{" "}
-            <strong>non-identifying usage events</strong> (for example, “a rota
-            was scanned” or “an alarm was created”) through <strong>PostHog</strong>,
-            an EU-hosted analytics provider. This in-app analytics is separate
+            <strong>usage events</strong> (for example, “a rota was scanned” or
+            “an alarm was created”) through <strong>PostHog</strong>, an
+            EU-hosted analytics provider. Events are tied to your pseudonymous
+            account identifier (the random UUID described above), never to your
+            name or email, so they are linked to your account. This in-app analytics is separate
             from our advertising measurement — the events are <em>not</em> sent to
             our attribution provider. We never log the content of your rota,
             images, files, or personal shift details. Legal basis: our
@@ -397,8 +400,8 @@ export default function Privacy() {
                       Privacy policy
                     </a>
                   </td>
-                  <td>In-app product analytics (anonymised)</td>
-                  <td>Non-identifying usage events, anonymous identifier</td>
+                  <td>In-app product analytics (pseudonymous)</td>
+                  <td>Usage events (no schedule content), pseudonymous account UUID</td>
                   <td>Understand usage and fix problems</td>
                   <td>EU</td>
                 </tr>
@@ -514,7 +517,7 @@ export default function Privacy() {
             data, to object to processing based on legitimate interest (including
             advertising attribution), to data portability, and to withdraw
             consent at any time. If you are signed in, you can delete your
-            account and all its data yourself in Settings → Account. For other
+            account and all its data yourself in Settings → Apple Account. For other
             requests, sending them from the app (Settings → Feedback) lets us
             match them to your records.
           </p>
